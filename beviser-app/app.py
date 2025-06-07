@@ -2,7 +2,9 @@ import streamlit as st
 import json
 
 # Indlæs JSON-data
-with open("beviser.json", "r", encoding="utf-8") as f:
+import os
+filepath = os.path.join(os.path.dirname(__file__), "beviser.json")
+with open(filepath, "r", encoding="utf-8") as f:
     data = json.load(f)
 
 # Init session state
