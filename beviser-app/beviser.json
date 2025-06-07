@@ -1,0 +1,670 @@
+{
+  "beviser": [
+    {
+      "bevis": "1) Produktreglen for differentialkvotient",
+      "sætning": "Hvis funktionerne 𝒇(𝒙) og 𝒈(𝒙) er differentiable i 𝒙𝟎, så er produktet 𝒑(𝒙) = 𝒇(𝒙) ⋅ 𝒈(𝒙) differentiabelt i 𝒙𝟎 med differentialkvotienten 𝒇′(𝒙𝟎) ⋅ 𝒈(𝒙𝟎) + 𝒇(𝒙𝟎) ⋅ 𝒈′(𝒙𝟎).",
+      "udførelse": [
+        {
+          "skridt": "\\Delta x = (x_0 + h) - x_0 = h",
+          "argumentation": "Som sætningen fortæller os så baserer vi beviset på forudsætningen om at funktionerne $f(x)$ og $g(x)$ er differentiable i punktet $x_0$. Målet med beviset er at bevise hvis en funktion $p(x)$ består af produktet af to funktioner $f(x)$ og $g(x)$ som begge er differentiable i $x_0$ så er funktionen $p(x)$ differentiabel ved $x_0$. \n\nVi beviser at $f(x) \\cdot g(x)$ er differentiable i $x_0$ med tretrinsreglen: \n\n1. Bestem differenskvotienten \n2. Omskriv differenskvotienten \n3. Undersøg om differenskvotienten har en grænseværdi for $\\Delta x \\to 0$ og i så fald bestem differentialkvoitenten. \n\nDet første skridt i tretrinsreglen er som sagt at bestemme differenskvotienten, og vi har to funktioner $f(x)$ og $g(x)$ som vi skal bestemme differenskvotienten for hver især. \n Differenskvotienten for $f(x)$ er hældningen af sekanten (linje der går gennem to punkter) der går gennem punkterne: \n$(x_0 , f(x_0))$ og $(x_0 + h , f(x_0 + h))$ \n\nOg differenskvotienten for $g(x)$ er hældningen af sekanten der går gennem punkterne:\n$(x_0 , g(x_0))$ og $(x_0 + h , g(x_0 + h))$ \n\nNår vi skal bestemme differenskvotienten, gør vi brug af to-punkts-formlen der bestemmer hældningen 'a' på en linje der går gennem to punkter: \n\n$a = \\frac{y_2 - y_1}{x_2 - x_1}$ \n\nFormlen bestemmer hældningen for en linje der går gennem 2 vilkårlige punkter: $(x_1 , y_1)$ og $(x_2 , y_2)$ ved at dividere de to punkters forskel i funktionsværdi med de to punkters forskel i x-værdi. \n\nHvis vi anvender formlen på vores to funktioner \n$f(x)$ i punkterne $(x_0 , f(x_0))$ og $(x_0 + h , f(x_0 + h))$ \n$g(x)$ i punkterne $(x_0 , g(x_0))$ og $(x_0 + h , g(x_0 + h))$, \n\nSå betyder det at vi kan bestemme deres differenskvotienter med disse brøker: \n\n$\\frac{f(x_0 + h) - f(x_0)}{(x_0 + h) - x_0}$ \n\n$\\frac{g(x_0 + h) - g(x_0)}{(x_0 + h) - x_0}$ \n\nFørste skridt i beviset er altså at opnå disse to udtryk fordi at de er hver især differenskvotienterne for $f(x)$ og $g(x)$ . \n\nDerfor starter beviset med at reducerer udtrykket for forskellen i x-værdi ($\\Delta x$) mellem de to punkter, til 'h' "
+        },
+        {
+          "skridt": "\\Delta y = p(x_0 + h) - p(x_0)",
+          "argumentation": "Som formlen viser skal vi også bruge forskellen i funktionsværdier, $\\Delta y$ ,  til at bestemme differenskvotienten. \nDet gøres ved at trække de to funktionsværdier  $p(x_0 + h)$ og $p(x_0)$ fra hinanden"
+        },
+        {
+          "skridt": "\\Delta y = (f(x_0 + h) \\cdot g(x_0 + h)) - (f(x_0) \\cdot g(x_0))",
+          "argumentation": "Vi erstatter $p(x_0)$ og $p(x_0 + h)$ med funktionsforskriften for $p(x)$ som er givet i bevissætningen, husk at anvend de to x-værdier for de to forskellige punkter som input til $f(x)$ og $g(x)$"
+        },
+        {
+          "skridt": "\\Delta y = f(x_0 + h) \\cdot g(x_0 + h) - f(x_0) \\cdot g(x_0)",
+          "argumentation": "Ophæv parentesen i udtrykket da der ikke er brug for den på fordi man ganger før man dividerer"
+        },
+        {
+          "skridt": "\\Delta y = f(x_0 + h) \\cdot g(x_0 + h) + f(x_0) \\cdot g(x_0 + h) - f(x_0) \\cdot g(x_0 + h) - f(x_0) \\cdot g(x_0)",
+          "argumentation": "Vi indsætter udtrykket: \n $- f(x_0) \\cdot g(x_0 + h) + f(x_0) \\cdot g(x_0 + h)$ \ni mellem de to led i udtrykket for $\\Delta y$. \n\nUdtrykket $f(x_0) \\cdot g(x_0 + h)$ bliver altså både tilføjet og trukket fra, og derfor kan vi gøre det uden at ændre på venstre side af lighedstegnet fordi: \n$ - f(x_0) \\cdot g(x_0 + h) + f(x_0) \\cdot g(x_0 + h) = 0$ \n\nDenne handling virker lidt tilfældig, men vi gør det af to gode grunde: \n\n1. Generelt ved vi at når man arbejder med to funktioner som $f(x)$ og $g(x)$, i et bevis så gør vi det nemmest for os selv ved at holde dem så adskilt som muligt. \n2. Vi ved også at vi arbejder os mod ét bestemt udtryk for forskel i funktionsværdier for både $f(x)$ og for $g(x)$. \n\nDenne tilføjelse giver os altså flere muligheder for at rykke rundt på strukturen af udtrykket for $\\Delta y$ til formålet om at hjælpe os med at opnå udtrykkene for de to funktioners differenskvotienter"
+        },
+        {
+          "skridt": "\\Delta y = (f(x_0 + h) - f(x_0)) \\cdot g(x_0 + h) + f(x_0) \\cdot (g(x_0 + h) - g(x_0))",
+          "argumentation": "Efter vores tilføjelse i skridtet før, blev det observeret at det samlede udtryk bestod af fire led. \n\nTo af ledene: $(f(x_0 + h) \\cdot g(x_0 + h)) - f(x_0) \\cdot g(x_0 + h)$ \nBlev begge ganget med en fælles faktor $g(x_0 + h)$ og derfor kunne vi samle dem til et led: \n$(f(x_0 + h) - f(x_0)) \\cdot g(x_0 + h)$ \n\nDe to andre led: $f(x_0) \\cdot g(x_0 + h) - f(x_0) \\cdot g(x_0)$ \nBlev begget ganget med en fælles faktor $f(x_0)$ og derfor kunne vi samle dem til et led: \n$f(x_0) \\cdot (g(x_0 + h) - g(x_0))$ \n\nDette betyder vi har forkortet og simplificeret hele udtrykket ved at indele det i to paranteser hvor den ene ganges med $g(x_0 + h)$ og det andet ganges med $f(x_0)$ .\nDette kaldes at faktorisere udtrykket og det er det vi har gjort for at adskille de to funktioner $f(x)$ og $g(x)$ så meget som som muligt i udtrykket for $\\Delta y$. \n\nNu har vi reduceret udtrykket for forskel i funktionsværdi på en måde hvor vi har adskilt de to funktioner $f(x)$ og $g(x)$ så meget som muligt, og vi har reduceret udtrykket for forskel i x-værdi (det første skridt vi fortog i beviset) og derfor kan vi bevæge os videre med at bestemme differenskvotienten."
+        },
+        {
+          "skridt": "\\frac{\\Delta y}{\\Delta x} = \\frac{\\Delta y}{h}",
+          "argumentation": "Vi opstiller udtrykket for differenskvotienten og erstatter $\\Delta x$ med 'h' som var det vi bestemte $\\Delta x$ til at være i første skridt af beviset."
+        },
+        {
+          "skridt": "\\frac{\\Delta y}{h} = \\frac{p(x_0 + h) - p(x_0)}{h}",
+          "argumentation": "Nu erstatter vi tegnet for forskel i funktionsværdi, $\\Delta y$ , med funktionen $p(x)$ og forskellen mellem funktionens to funktionsværdier: $p(x_0)$ og $p(x_0 + h)$"
+        },
+        {
+          "skridt": "\\frac{\\Delta y}{h} = \\frac{(f(x_0 + h) - f(x_0)) \\cdot g(x_0 + h) + f(x_0) \\cdot (g(x_0 + h) - g(x_0))}{h}",
+          "argumentation": "Nu indsætter vi det udtryk for forskel i funktionsværdi, $\\Delta y$, som vi reducerede os frem til tidligere og dermed har vi faktisk et udtryk for differenskvotienten for $p(x)$.\nDet er fordi vi har et udtryk der består af funktionsforskriften for $p(x)$ som tager forskellen i funktionsværdi for $p(x)$ og dividerer den med forskellen i x-værdi.\n\nNu er vi altså nået til næste skridt i tretrinsreglen: \nOmskriv differenskvotienten \n\nMed det menes at vi skal omskrive differenskvotienten til et udtryk hvor vi kender grænseværdien, og i dette tilfælde er det grænseværdieRNE fordi det altså både er $f(x)$ OG $g(x)$ vi skal bestemme grænseværdierne for. \n\nNår vi siger at 'vi kender grænseværdierne' for $f(x_0)$ og $g(x_0)$ og at vi skal 'omskrive differenskvotienten' så skal vi lige tage et kig på sætningen for beviset. \n\nI bevissætningen står der:'𝒇(𝒙) og 𝒈(𝒙) er differentiable i 𝒙𝟎' \n\nDenne sætning betyder at vi ved at følgende gælder: \n\n$\\lim_{h \\to 0} \\left( \\frac{f(x_0 + h) - f(x_0)}{h} \\right) = f'(x_0)$ \n\n$\\lim_{h \\to 0} \\left( \\frac{g(x_0 + h) - g(x_0)}{h} \\right) = g'(x_0)$ \n\nSå når vi siger 'kender grænseværdierne' betyder det at vi ved hvad der sker med henholdsvis $f(x)$ og $g(x)$ når vi anvender $\\lim_{h \\to 0}$\n\nVi ved altså hvad der sker med hældningen på linjen der går gennem punkterne $(x_0, f(x_0))$ og $(x_0+h, f(x_0+h))$ for $f(x)$ \nVi ved også hvad der sker med hældningen på linjen der går gennem punkterne $(x_0, g(x_0))$ og $(x_0+h, g(x_0+h))$ for $g(x)$. \n\nMed fagord vil vi sige at vi ved at $f(x)$ og $g(x)$ er 'kontinuert' (ingen pludselige hældningsskift eller noget) ved $x_0$ og det vil sige hvis vi gør forskellen mellem $x_0$ og $x_0 + h$ MEGET lille i de to funktioner, så ved vi at hældningen af denne linje vil komme meget tæt på den 'øjeblikkelige' hældning ved $x_0$ - altså differentialkvotienten.  \n\nAt vi skal omskrive differenskvotienten betyder altså at vi skal rykke rundt på udtrykket for $\\frac{\\Delta y}{h}$ så at det indeholder de to udtryk:\n\n$\\frac{f(x_0 + h) - f(x_0)}{(x_0 + h) - x_0}$ \n\n$\\frac{g(x_0 + h) - g(x_0)}{(x_0 + h) - x_0}$ \n\nOg vi så derfra kan anvende $\\lim_{h \\to 0}$ og vise at produktreglen gælder for en vilkårlig funktion $p(x)$ der er produktet af to funktioner $f(x)$ og $g(x)$ som begge er differentiable i $x_0$."
+        },
+        {
+          "skridt": "\\frac{\\Delta y}{h} = \\frac{(f(x_0 + h) - f(x_0)) \\cdot g(x_0 + h)}{h} +  \\frac{f(x_0) \\cdot (g(x_0 + h) - g(x_0))}{h}",
+          "argumentation": "Vi deler brøken op mellem de to led fordi vi gerne vil adskille ledene til formål om at have differenskvotienterne for $f(x)$ og $g(x)$ i udtrykket og dermed bestemme grænseværdierne."
+        },
+        {
+          "skridt": "\\frac{\\Delta y}{h} = \\left( \\frac{f(x_0 + h) - f(x_0)}{h} \\right) \\cdot g(x_0 + h) + f(x_0) \\cdot \\left( \\frac{g(x_0 + h) - g(x_0)}{h} \\right)",
+          "argumentation": "Vi sætter de to faktorer: $g(x_0 + h)$ og $f(x_0)$ ned ved siden af deres brøker for nu at have to brøker der hver især kun afhænger af én funktion. \nEndnu vigtigere, så har vi nu bestemt de to differenskvotienter for $f(x)$ og $g(x)$ og eftersom sætningen for beviset siger at: 'funktionerne 𝒇(𝒙) og 𝒈(𝒙) er differentiable i 𝒙𝟎' \n\n Så ved vi at hvis forskellen i x-værdi mellem $x_0$ og $x_0 + h$ bliver gjort EKSTREMT lille (altså værdien for 'h' bliver gjort lille) så at det NÆSTEN kan betragtes som ét punkt, så ved vi at differenskvotinerne for $f(x)$ og $g(x)$ nærmer sig de afledte funktioner $f'(x)$ og $g'(x)$ \n\nMed fagord vil man sige: \n'Vi ved at funktionerne for $g(x)$ og $f(x)$ er differentiable ved $x_0$ og derfor ved vi at grænseværdien af differenskvotienten eksisterer i det punkt - og at den definerer differentialkvotienten'"
+        },
+        {
+          "skridt": "\\lim_{h \\to 0} \\frac{\\Delta y}{h} = \\lim_{h \\to 0} \\left( \\left( \\frac{f(x_0 + h) - f(x_0)}{h} \\right) \\cdot g(x_0 + h) + f(x_0) \\cdot \\left( \\frac{g(x_0 + h) - g(x_0)}{h} \\right) \\right)",
+          "argumentation": "Vi er noget til tredje skridt i tretrinsreglen: \nUndersøg om differenskvotienten har en grænseværdi for $\\Delta x \\to 0$ og i så fald bestem differentialkvotienten \n\nVi skal altså bestemme differentialkvotienten ved at bestemme grænseværdierne.\n\nFor at bestemme grænseværdierne til de to differenskvotienter og dermed differentialkvotienterne, skal vi som sagt minimere forskellen, 'h', så meget som muligt og det gør vi ved brug af $\\lim_{h \\to 0}$ som egentlig bare betyder at 'h' bliver ekstremt lille men IKKE 0."
+        },
+        {
+          "skridt": "\\lim_{h \\to 0} \\frac{\\Delta y}{h} = f'(x_0) \\cdot g(x_0) + f(x_0) \\cdot g'(x_0)",
+          "argumentation": "Nu har vi bestemt $f'(x)$ og $g'(x)$ også kaldt differentialkvotienterne for henholdsvis $f(x)$ og $g(x)$ med tretrinsreglen.\n\n Vi vidste at de to funktioner var differentiable i punktet $x_0$. \nMed den viden kunne vi først gå efter at bestemme differenskvotienterne for funktionerne og derefter bruge $\\lim_{h \\to 0}$ til at bestemme grænseværdierne for differenskvotienterne som gav differentialkvotienterne."
+        },
+        {
+          "skridt": "p'(x_0) = f'(x_0) \\cdot g(x_0) + f(x_0) \\cdot g'(x_0)",
+          "argumentation": "Nu erstattes '$\\lim_{h \\to 0} \\frac{\\Delta y}{h}$' med differentialkvotienten til $p(x_0)$ fordi vi har kunne succesfuldt bruge $\\lim_{h \\to 0}$ på differenskvotienten for $p(x)$ ved at omskrive differenskvotienten til et udtryk der indeholdte differenskvotienterne for $f(x)$ og $g(x)$ og derefter bestemme grænseværdierne for disse.\n\nDette betyder at vi har bevist at $p(x)$ er differentiable i $x_0$ og at differentialkvotienten til $p(x)$ er $f'(x_0) \\cdot g(x_0) + f(x_0) \\cdot g'(x_0)$. \n\nDette er altså det vi ville bevise og derfor er beviset nu færdigt."
+        },
+        {
+          "skridt": "",
+          "argumentation": "Dermed er ovenstående sætning bevist $\\blacksquare$"
+        }
+      ]
+    },
+    {
+      "bevis": "1) Regneregel for sum af differentialkvotient",
+      "sætning": "Hvis funktionerne 𝒇(𝒙) og 𝒈(𝒙) er differentiable i 𝒙𝟎, så er summen 𝒑(𝒙) = 𝒇(𝒙) + 𝒈(𝒙) differentiabel i 𝒙𝟎 med differentialkvotienten 𝒇′(𝒙𝟎) + 𝒈′(𝒙𝟎).",
+      "udførelse": [
+        {
+          "skridt": "\\Delta x = (x_0 + h) - x_0 = h",
+          "argumentation": "Som sætningen fortæller os så baserer vi beviset på forudsætningen om at funktionerne $f(x)$ og $g(x)$ er differentiable i punktet $x_0$. Målet med beviset er at bevise hvis en funktion $p(x)$ består af summen af to funktioner $f(x)$ og $g(x)$ som begge er differentiable ved $x_0$ så er funktionen $p(x)$ differentiabel ved $x_0$. \n\nVi beviser at $f(x) + g(x)$ er differentiable i $x_0$ med tretrinsreglen: \n\n1. Bestem differenskvotienten \n2. Omskriv differenskvotienten \n3. Undersøg om differenskvotienten har en grænseværdi for $\\Delta x \\to 0$ og i så fald bestem differentialkvotienten. \n\nDet første skridt i tretrinsreglen er som sagt at bestemme differenskvotienten, og vi har to funktioner $f(x)$ og $g(x)$ som vi skal bestemme differenskvotienten for hver især. \n Differenskvotienten for $f(x)$ er hældningen af sekanten (linje der går gennem to punkter) der går gennem punkterne: \n$(x_0 , f(x_0))$ og $(x_0 + h , f(x_0 + h))$ \n\nOg differenskvotienten for $g(x)$ er hældningen af sekanten der går gennem punkterne:\n$(x_0 , g(x_0))$ og $(x_0 + h , g(x_0 + h))$ \n\nNår vi skal bestemme differenskvotienten, gør vi brug af to-punkts-formlen der bestemmer hældningen 'a' på en linje der går gennem to punkter: \n\n$a = \\frac{y_2 - y_1}{x_2 - x_1}$ \n\nFormlen bestemmer hældningen for en linje der går gennem 2 vilkårlige punkter: $(x_1 , y_1)$ og $(x_2 , y_2)$ ved at dividere de to punkters forskel i funktionsværdi med de to punkters forskel i x-værdi. \n\nHvis vi anvender formlen på vores to funktioner \n$f(x)$ i punkterne $(x_0 , f(x_0))$ og $(x_0 + h , f(x_0 + h))$ \n$g(x)$ i punkterne $(x_0 , g(x_0))$ og $(x_0 + h , g(x_0 + h))$, \n\nSå betyder det at vi kan bestemme deres differenskvotienter med disse brøker: \n\n$\\frac{f(x_0 + h) - f(x_0)}{(x_0 + h) - x_0}$ \n\n$\\frac{g(x_0 + h) - g(x_0)}{(x_0 + h) - x_0}$ \n\nFørste skridt i beviset er altså at opnå disse to udtryk fordi at de er hver især differenskvotienterne for $f(x)$ og $g(x)$ . \n\nDerfor starter beviset med at reducerer udtrykket for forskellen i x-værdi ($\\Delta x$) mellem de to punkter, til 'h' "
+        },
+        {
+          "skridt": "\\Delta y = p(x_0 + h) - p(x_0)",
+          "argumentation": "Som formlen viser skal vi også bruge forskellen i funktionsværdier, $\\Delta y$ ,  til at bestemme differenskvotienten. \nDet gøres ved at trække de to funktionsværdier  $p(x_0 + h)$ og $p(x_0)$ fra hinanden"
+        },
+        {
+          "skridt": "\\Delta y = (f(x_0 + h) + g(x_0 + h)) - (f(x_0) + g(x_0))",
+          "argumentation": "Vi erstatter $p(x_0)$ og $p(x_0 + h)$ med funktionsforskriften for $p(x)$ som er givet i bevissætningen, husk at anvend de to x-værdier for de to forskellige punkter som input til $f(x)$ og $g(x)$"
+        },
+        {
+          "skridt": "\\Delta y = f(x_0 + h) + g(x_0 + h) - f(x_0) - g(x_0)",
+          "argumentation": "Ophæver parentesen i udtrykket og ændre fortegn i den negative parentes."
+        },
+        {
+          "skridt": "\\Delta y = f(x_0 + h) - f(x_0) + g(x_0 + h) - g(x_0)",
+          "argumentation": "Vi rykker rundt på udtrykket for at holde de to funktioner så adskilt som muligt"
+        },
+        {
+          "skridt": "\\frac{\\Delta y}{\\Delta x} = \\frac{\\Delta y}{h}",
+          "argumentation": "Vi opstiller udtrykket for differenskvotienten og erstatter $\\Delta x$ med 'h' som var det vi bestemte $\\Delta x$ til at være i første skridt af beviset."
+        },
+        {
+          "skridt": "\\frac{\\Delta y}{h} = \\frac{p(x_0 + h) - p(x_0)}{h}",
+          "argumentation": "Nu erstatter vi tegnet for forskel i funktionsværdi, $\\Delta y$ , med funktionen $p(x)$ og forskellen mellem funktionens to funktionsværdier: $p(x_0)$ og $p(x_0 + h)$"
+        },
+        {
+          "skridt": "\\frac{\\Delta y}{h} = \\frac{f(x_0 + h) - f(x_0) + g(x_0 + h) - g(x_0)}{h}",
+          "argumentation": "Nu indsætter vi det udtryk for forskel i funktionsværdi, $\\Delta y$, som vi reducerede os frem til tidligere og dermed har vi et udtryk for differenskvotienten for $p(x)$.\nDet er fordi vi har et udtryk der består af funktionsforskriften for $p(x)$ som tager forskellen i funktionsværdi for $p(x)$ og dividerer den med forskellen i x-værdi.\n\nNu er vi altså nået til næste skridt i tretrinsreglen: \nOmskriv differenskvotienten \n\nMed det menes at vi skal omskrive differenskvotienten til et udtryk hvor vi kender grænseværdien, og i dette tilfælde er det grænseværdieRNE fordi det altså både er $f(x)$ OG $g(x)$ vi skal bestemme grænseværdierne for. \n\nFor at forstå hvad der menes når vi siger at 'vi kender grænseværdierne' for $f(x)$ og $g(x)$ og at vi skal 'omskrive differenskvotienten' så skal vi lige tage et kig på sætningen for beviset. \n\nI bevissætningen står der:'𝒇(𝒙) og 𝒈(𝒙) er differentiable i 𝒙𝟎' \n\nDenne sætning betyder at vi ved at følgende gælder: \n\n$\\lim_{h \\to 0} \\left( \\frac{f(x_0 + h) - f(x_0)}{h} \\right) = f'(x_0)$ \n\n$\\lim_{h \\to 0} \\left( \\frac{g(x_0 + h) - g(x_0)}{h} \\right) = g'(x_0)$ \n\nSå når vi siger 'kender grænseværdierne' betyder det at vi ved hvad der sker med henholdsvis $f(x)$ og $g(x)$ når vi anvender $\\lim_{h \\to 0}$\n\nVi ved altså hvad der sker med hældningen på linjen der går gennem punkterne $(x_0, f(x_0))$ og $(x_0+h, f(x_0+h))$ for $f(x)$ \nVi ved også hvad der sker med hældningen på linjen der går gennem punkterne $(x_0, g(x_0))$ og $(x_0+h, g(x_0+h))$ for $g(x)$. \n\nMed fagord vil vi sige at vi ved at $f(x)$ og $g(x)$ er 'kontinuere' (ingen pludselige hældningsskift eller noget) ved $x_0$ og det vil sige hvis vi gør forskellen mellem $x_0$ og $x_0 + h$ MEGET lille i de to funktioner, så ved vi at hældningen af denne linje vil komme meget tæt på den 'øjeblikkelige' hældning ved $x_0$ - altså differentialkvotienten.  \n\nAt vi skal omskrive differenskvotienten betyder altså at vi skal rykke rundt på udtrykket for $\\frac{\\Delta y}{h}$ så at det indeholder de to udtryk:\n\n$\\frac{f(x_0 + h) - f(x_0)}{(x_0 + h) - x_0}$ \n\n$\\frac{g(x_0 + h) - g(x_0)}{(x_0 + h) - x_0}$ \n\nOg vi så derfra kan anvende $\\lim_{h \\to 0}$ og vise at produktreglen gælder for en vilkårlig funktion $p(x)$ der er produktet af to funktioner $f(x)$ og $g(x)$ som begge er differentiable i $x_0$."
+        },
+        {
+          "skridt": "\\frac{\\Delta y}{h} = \\frac{f(x_0 + h) - f(x_0)}{h} + \\frac{g(x_0 + h) - g(x_0)}{h}",
+          "argumentation": "Vi deler brøken op mellem de to led fordi vi gerne vil adskille ledene til formål om at have differenskvotienterne for $f(x)$ og $g(x)$ i udtrykket og dermed bestemme grænseværdierne. Nu er andet skridt klaret fordi vi har omskrevet differenskvotienten til et udtryk der indeholder differenskvotienterne for $f(x)$ og $g(x)$"
+        },
+        {
+          "skridt": "\\lim_{h \\to 0} \\frac{\\Delta y}{h} = \\lim_{h \\to 0} (\\frac{f(x_0 + h) - f(x_0)}{h} + \\frac{g(x_0 + h) - g(x_0)}{h})",
+          "argumentation": "Vi er noget til tredje skridt i tretrinsreglen: \nUndersøg om differenskvotienten har en grænseværdi for $\\Delta x \\to 0$ og i så fald bestem differentialkvotienten \n\nVi skal altså bestemme differentialkvotienten ved at bestemme grænseværdierne.\n\nFor at bestemme grænseværdierne til de to differenskvotienter og dermed differentialkvotientern, skal vi som sagt minimere forskellen, 'h', så meget som muligt og det gør vi ved brug af $\\lim_{h \\to 0}$ som egentlig bare betyder at 'h' bliver ekstremt lille men IKKE 0."
+        },
+        {
+          "skridt": "\\lim_{h \\to 0} \\frac{\\Delta y}{h} = \\lim_{h \\to 0} \\frac{f(x_0 + h) - f(x_0)}{h} + \\lim_{h \\to 0} \\frac{g(x_0 + h) - g(x_0)}{h}",
+          "argumentation": "Nu finder vi grænseværdierne for de to differenskvotienter $f(x)$ og $g(x)$ \n\nOg dermed differentialkvotienten for dem og $p(x_0)$"
+        },
+        {
+          "skridt": "p'(x_0) = f'(x_0) + g'(x_0)",
+          "argumentation": "Nu erstattes '$\\lim_{h \\to 0} \\frac{\\Delta y}{h}$' med differentialkvotienten til $p(x_0)$ fordi vi har kunne succesfuldt bruge $\\lim_{h \\to 0}$ på differenskvotienten for $p(x)$ ved at omskrive differenskvotienten til et udtryk der indeholdte differenskvotienterne for $f(x)$ og $g(x)$ og derefter bestemme grænseværdierne for disse.\n\nDette betyder at vi har bevist at $p(x)$ er differentiable i $x_0$ og at differentialkvotienten til $p(x)$ er $f'(x_0) + g'(x_0)$. \n\nDette er altså det vi ville bevise og derfor er beviset nu færdigt."
+        },
+        {
+          "skridt": "p'(x_0) = f'(x_0) + g'(x_0)",
+          "argumentation": "Dermed er ovenstående sætning bevist $\\blacksquare$"
+        }
+    ]
+    },
+    {
+      "bevis": "2/4) Bevis for arealfunktionen er en stamfunktion",
+      "sætning": "Sætning: Arealfunktionen 𝑨(𝒙) for en kontinuert funktion 𝒇(𝒙) er differentiabel, og der gælder:\n𝑨′(𝒙) = 𝒇(𝒙)\n(Dvs. arealfunktionen 𝑨(𝒙) er en stamfunktion til 𝒇(𝒙))",
+      "udførelse": [
+        {
+          "skridt": "Introduktion",
+          "argumentation": "Inden vi beviser at arealfunktionen, $A(x)$, er en stamfunktion af den funktion $f(x)$ hvor arealet mellem dens graf og x-aksen er hvad der beskrives, så redegører vi lige for nogle overordnede ting. $A(x)$ er også differentiabel. \n\n$A(x)$ er en funktion der beskriver arealet mellem en graf $f(x)$ og x-aksen i området $[a, x]$.\n\n$f(x)$ har følgende egenskaber som er vigtige at huske til beviset:\n$f(x)$ er en kontinuer funktion, Dvs. at den er differentiabel i hele sit interval altså vi kender grænseværdien. \n$f(x)$ løber i intervallet $[a, b]$ og dens funktionsværdi vil altid være lig 0 eller positiv:\n $f(x) ≥ 0$ \n\nHUSK: til eksamen så gerne inddrag nogle af tegningerne fra første side af beviskompendiet til at forklare denne del."},
+        {
+          "skridt": "BEVIS",
+          "argumentation": "Sætning:\nArealfunktionen 𝑨(𝒙) for en kontinuert funktion 𝒇(𝒙) er differentiabel, og der gælder: 𝑨′(𝒙) = 𝒇(𝒙)(Dvs. arealfunktionen 𝑨(𝒙) er en stamfunktion til 𝒇(𝒙))\n\nEfter redegørelsen af hvad vi mener når vi siger 'arealfunktion' så beviser vi at arealfunktionen, $A(x)$, er en stamfunktion til $f(x)$. \n\nSelvom vi skal bevise at $A(x)$ er en stamfunktion, så starter vi fra et lidt andet sted.\n Vi vælger faktisk at bevise at $f(x)$ er differentialkvotienten til $A(x)$. \nDet gør vi fordi at vi ved at den afledte af en stamfunktion er lig funktionen som stamfunktionen er en stamfunktion til: \n\n$\\int f(x)\\,dx = F(x)+k \\Leftrightarrow F'(x)=f(x) $ \n\nDerfor kan beviset anskues lidt som et differentialregningsbevis fordi at vi faktisk beviser at funktionen $f(x)$ er differentialkvotienten til $A(x)$ og på den måde beviser vi også at $A(x)$ er en stamfunktion til $f(x)$\n\nDerfor bruger vi tretrinsreglen til at udføre beviset:\n\n 1.Bestem differenskvotienten\n2.Omskriv differenskvotienten\nUndersøg om differens.\n3.Undersøg om differenskvotienten har en grænseværdi for $\\Delta x \\to 0$ og i så fald bestem differentialkvotienten."},
+        {
+          "skridt": "\\Delta A = A(x_0 + h) - A(x_0)",
+          "argumentation": "Vi bestemmer forskellen i funktionsværdi for $A(x)$ i punkterne $(x_0, A(x_0))$ og $(x_0+h, A(x_0+h))$. \n\nHusk $A(x)$ er den funktion hvis differentialkvotient vi skal bestemme til at være $f(x)$. \n\nHusk også det der gør det her bevis anderledes fra normale differentialregningsbeviser er at vi ikke er givet nogen funktionsforskrift for $A(x)$ eller $f(x)$ men vi ved at $A(x)$ beskriver arealet mellem grafen $f(x)$ og x-aksen i intervallet $[a, x]$ \nHvor $a$ er den laveste x-værdi $f(x)$ kan have.\n\nI første skridt af selve beviset viser vi så at arealet af området mellem grafen $f(x)$ og førsteaksen i intervallet $[x_0, x_0+h]$ er bestemt til at være $\\Delta A$."},
+        {
+          "skridt": "\\frac{\\Delta A}{h} = \\frac{A(x_0 + h) - A(x_0)}{h}",
+          "argumentation": "Nu er differenskvotienten for $A(x)$ bestemt  ved at dividere forskellen i funktionsværdi med forskellen i x-værdi. I teorien behøver vi ikke at omskrive differenskvotienten  til noget nyt for at kunne bestemme differentialkvotienten fordi som bevissætningen siger: \n\n'Arealfunktionen 𝑨(𝒙) for en kontinuert funktion 𝒇(𝒙) er differentiabel' \n\n Det betyder jo at vi ved hvad der sker med differenskvotienten til $A(x)$ når vi laver $\\lim{h \\to 0}$ fordi vi kender grænseværdien. Problemet er bare at vi ikke har nogen funktionsforskrift for $A(x)$ så lige nu vil det ikke lære os noget nyt om $A(x)$."},
+        {
+          "skridt": "f(x_0) \\cdot h ≤ \\Delta A ≤ f(x_0+h) \\cdot h",
+          "argumentation": "Normalt vil vi skulle omskrive differenskvotienten for $A(x)$, men som nævnt tidligere så er vi ikke givet nogle funktionsforskrift for $A(x)$ så vi kan ikke omskrive differenskvotienten til noget nyt fordi vi ved jo ikke rigtigt noget om hvordan funktionsforskriften for $A(x)$ ser ud. \n\nMen det er faktisk okay fordi vi kan lave et lille trick på baggrund af hvad vi ellers ved indtil videre.\n\nVi ved fra første skridt i beviset at $\\Delta A$ er arealet mellem grafen $f(x)$ og x-aksen i området $[x_0, x_0+h]$.\n\n Vi ved faktisk også to andre vigtige ting:\n\nVi ved at arealet af rektanglet som har højden af $f(x)$ i punktet $(x_0, f(x_0))$ og bredden $h$ er mindre end eller lig med arealet mellem grafen for $f(x)$ og x-aksen i området $[x_0, x_0+h]$ altså $\\Delta A$. \n\nVi ved også at arealet af rektanglet som har højden af $f(x)$ i punktet $(x_0+h, f(x_0+h))$ og bredden $h$ er større end eller lig med arealet mellem grafen for $f(x)$ og x-aksen i området $[x_0, x_0+h]$ altså det vi har defineret som $\\Delta A$. (Kig gerne på tegningen i beviset for illustration) \n\nGrunden til at det KAN ske at $\\Delta A$ er lig med mindre eller større rektangel er at hvis funktionen $f(x)$ er konstant (flad) i intervallet $[x_0, x_0+h]$."},
+        {
+          "skridt": "\\frac{f(x_0) \\cdot \\cancel{h}}{\\cancel{h}} ≤ \\frac{\\Delta A}{h} ≤ \\frac{f(x_0+h) \\cdot \\cancel{h}}{\\cancel{h}} \\Leftrightarrow f(x_0) ≤ \\frac{\\Delta A}{h} ≤ f(x_0+h)",
+          "argumentation": "Vi dividerer med 'h' for at få differenskvotienten for $A(x)$.\n\n Nu ved vi lige pludselig lidt mere om differenskvotienten for $A(x)$ fordi at vi nu har 'klemt' den imellem to forskellige funktionsværdier fra den samme funktion.  \n\nVed at tage en lille omvej har altså vi lært lidt mere om differenskvotienten for $A(x)$. \nUdtrykket siger altså nu at differenskvotienten for $A(x)$ er større end eller lig med $f(x)$ i punktet $(x_0, f(x_0))$ og at den er mindre end eller lig med $f(x)$ i punktet $(x_0+h, f(x_0+h))$."},
+        {
+          "skridt": "f(x_0) ≤ \\frac{A(x_0+h)-A(x_0)}{h} ≤ f(x_0+h)",
+          "argumentation": "Nu erstatter vi tegnet for differenskvotienten for $A(x)$ med udtrykket for forskellen i $A(x)$ 's funktionsværdi."},
+        {
+          "skridt": "\\lim_{h \\to 0} f(x_0) \\leq \\lim_{h \\to 0} \\frac{A(x_0 + h) - A(x_0)}{h} \\leq \\lim_{h \\to 0} f(x_0 + h) \\Leftrightarrow f(x_0) ≤ \\frac{A(x_0+h)-A(x_0)}{h} ≤ f(x_0)",
+          "argumentation": "Nu bestemmer vi så grænseværdien ved at anvende $\\lim_{h \\to 0}$ på alle tre dele af udtrykket, og det gør vi først nu fordi at det ikke påvirker først del: $f(x_0)$ fordi at den ikke afhænger af 'h' og derfor vil en ændring af 'h' ikke påvirke $f(x_0)$. \n\nUdover det så ændre $\\lim_{h \\to 0}$ sidste del til at blive det samme som første del fordi det eneste der adskilte $f(x_0)$ og $f(x_0+h)$ var 'h', og 'h' bliver jo så tæt på 0 at vi bare kan fjerne 'h' i udtrykket eftersom det bare står som del af input til en funktoin. \n\nDenne handling efterlader os altså med et udtryk der siger at grænseværdien for differenskvotienten for $A(x)$ er større eller lig med $f(x)$ i punktet $(x_0, f(x_0))$. Og mindre eller lig med $f(x)$ i punktet $(x_0, f(x_0))$."}, 
+        {
+          "skridt": "f(x_0) ≤ \\frac{A(x_0+h)-A(x_0)}{h} ≤ f(x_0) \\Leftrightarrow f(x_0) = \\frac{A(x_0+h)-A(x_0)}{h} = f(x_0) \\Leftrightarrow \\frac{A(x_0+h)-A(x_0)}{h} = f(x_0)",
+          "argumentation": "På baggrund af anvendelsen af $\\lim_{h \\to 0}$ og kan vi ændre '$≤$' til '$=$'."},
+        {
+          "skridt": "A'(x_0) = f(x_0)",
+          "argumentation": "Som sagt kender vi grænseværdien for differenskvotienten til $A(x_0)$ så når vi anvender $\\lim_{h \\to 0}$ på differenskvotienten for $A(x)$ så får vi differentialkvotienten for $A(x)$."},
+        {
+          "skridt": "A'(x_0) = f(x_0)",
+          "argumentation": "Dermed er ovenstående sætning bevist $\\blacksquare$."},
+        {
+          "skridt": "Areal",
+          "argumentation": "Nu har vi bevist at $A'(x) = f(x)$ og dermed at arealfunktionen $A(x)$ er en stamfunktion til $f(x)$.\n\nMen for at afslutte denne forklaring om arealfunktioner skal vi lige tage et skridt tilbage til første del af beviset.\nHer forklarede vi at $A(x)$ bestemmer arealet mellem grafen for $f(x)$ der løber i intervallet $[a, c]$ og x-aksen i intervallet $[a, x]$. Med dette kunne vi også konkludere at for at bestemme arealet af et bestemt område $[a, b]$ mellem grafen for $f(x)$ og x-aksen, så kan vi gøre dette: \n$A(b)-A(a)$ \n\n Lige før beviste vi at $A(x)$ bare er én ud af et uendeligt antal stamfunktioner til en funktion $f(x)$, og alle disse forskellige stamfunktioner er adskilt af en konstant $k$ som kan være forskellig. Men eftersom vi i starten definerede arealet i et bestemt område med: \n$A(b)-A(a)$  \n\nOg vi ved at: \n\n$A(x)=F(x)+k$ \n\nSå selvom at en stamfunktion ikke har den samme $k$ værdi som arealfunktionen, men når vi laver udregningen på den her måde:\n\n$A(b)-A(a)=F(b)+k-(F(a)+k) \\Leftrightarrow A(b)-A(a)=F(b)+k-F(a)-k$\n\n $k$ går ud md sig selv.\n\n$A(b)-A(a)=F(b)-F(a)$ \n\nSå bliver tallet $k$ som var det eneste der adskilte arealfunktionen fra andre stamfunktioner alligevel slettet og derfor kan vi bruge en hvilken som helst stamfunktion til at bestemme arealet mellem grafen for $f(x)$ og x-aksen i et bestemt område."}
+          ]
+        },
+{
+    "bevis": "3) Middelværdi og spredning",
+    "sætning": "Sætning: For en stokastisk variabel 𝑿 der er binomialfordelt med antalsparameter 𝒏 og sandsynlighedsparameter 𝒑, er middelværdien, 𝝁, givet ved 𝝁 = 𝒏 ⋅ 𝒑",
+    "udførelse": [
+      {
+        "skridt": "Introduktion",
+        "argumentation": "Vi skal bevise formlen for middelværdien for en binomialfordelt stokastisk variabel X. Først skal vi lave et lille bevis for en specifik omskrivining af binomialkoefficienten ganget med antallet af succeser $r$ som vi kommer til at bruge i beviset for middelværdien til en binomialfordelt stokastisk variabel X med antalsparameter $n$ og sandsynlighedsparameter $p$."},
+      {
+        "skridt": "𝑟 ⋅ k(n, r) = n ⋅ k(n − 1, r − 1)",
+        "argumentation": "Bevis for hjælpesætning: For de to binomialkoefficenter 𝑲(𝒏, 𝒓) og 𝑲(𝒏 − 𝟏, 𝒓 − 𝟏) gælder følgende sammenhæng: 𝑟 ⋅ $K(n, r) = n \\cdot 𝐾(n − 1, r − 1)$\n\nVi beviser en omskrivning af udtrykket for binomialkoefficienten ganget med antallet af succeser $r$.\n\nBinomialkoefficienten tager et antal successer $r$ og bestemmer antallet af måder man kan få $r$ succeser i $n$ forsøg. De $n$ forsøg er fast bestemt for hele binomialfordelingen og kan ikke blive ændret på. \n\n Formlen for binomialkoefficienten er:\n\n$k(n, r)=\\frac{n!}{r! \\cdot (n-r)!}$.\n\nDet svære ved dette bevis, er ikke intuitionen eller argumentationen, det er regnereglerne og omskrivningerne vi fortager os som godt kan være lidt fremmede."},
+      {
+        "skridt": "r ⋅ k(n, r) = r \\cdot \\frac{n!}{r! \\cdot (n-r)!} \\Leftrightarrow \\frac{n!}{(r - 1)! \\cdot (n - r)!}",
+        "argumentation": "Vi fortager os en omskrivning og til at starte med så er det vigtigt vi forstår hvad '$!$' betyder: \n\n$3! = 3 \\cdot 2 \\cdot 1$ \n\n$10! = 10 \\cdot 9 \\cdot 8 \\cdot ... \\cdot 1 $\n\n$n!=n \\cdot (n-1) \\cdot (n-2) \\cdot ... \\cdot1$ \n\n$n!=(n-1)!$ \n\nMed denne viden kan omskrivningen forklares ved at vi starter med at gange $r$ i tælleren af brøken: \n\n$\\frac{r \\cdot n!}{r! \\cdot (n-r)!}$ \n\nOg med vores forståelse af betydningen af '$!$' så kan vi slette $r$ fra tælleren ved at omskrive $r!$: \n\n$r! = r \\cdot (r-1)!$ \n\nSå vi har brøken: \n\n$\\frac{\\cancel{r} \\cdot n!}{\\cancel{r}\\cdot(r-1)!\\cdot(n-r)!} \\Leftrightarrow \\frac{n!}{(r-1)!\\cdot(n-r)!}$"},
+      {
+        "skridt": "r ⋅ k(n, r) = \\frac{n!}{(r - 1)! \\cdot (n - r)!}\\Leftrightarrow \\frac{n \\cdot (n - 1)!}{(r - 1)! \\cdot (n - r)!}",
+        "argumentation": "Vi omskriver $n!$ til Med samme regel som tidligere: \n\n$n!=(n-1)!$ "},
+      {
+        "skridt": "r ⋅ k(n, r) = n \\cdot \\frac{ (n - 1)!}{(r - 1)! \\cdot (n - r)!}",
+        "argumentation": "Vi rykker ud foran brøken, så vi har et stående udtryk for binomialkoefficienten, med én mindre succeser $r-1$ og én mindre forsøg, altså antalsparameter: $n-1$."},
+      {
+        "skridt": "r ⋅ k(n, r) = n \\cdot \\frac{ (n - 1)!}{(r - 1)! \\cdot (n - r)!} = n \\cdot \\frac{ (n - 1)!}{(r - 1)! \\cdot ((n-1) - (r-1))!}",
+        "argumentation": "Vi omskriver $(n-r)!$ fordi at så har vi bevist det og denne omskrivelse kræver ikke nogen regne regler vi har lavet udtrykket om på denne måde: \n\n$(n-r)! = ((n-1)-(r-1))!$ \n\n Når vi så ophæver den negative parentes der indeholder leddet med $r$ så skal vi ændre fortegn\n\n$((n-1)-(r-1))! = (n-1-r+1)! = (n-r)!$"},
+      {
+        "skridt": "n \\cdot K(n - 1, r - 1)",
+        "argumentation": "Dermed er ovenstående hjælpesætning bevist $\\blacksquare$."},
+      {
+        "skridt": "Bevis",
+        "argumentation": "Nu beviser vi formlen for middelværdien, $\\mu$ (udtalt 'my'), til en binomialfordelt stokastisk variabel X med antalsparameter $n$ og sandsynlighedsparameter $p$."},
+      {
+        "skridt": "\\mu =x_0 \\cdot p_0 + x_1 \\cdot p_1 + \\cdots + x_n \\cdot p_n",
+          "argumentation": "I første skridt tager vi udgangspunkt i formlen for middelværdien af en diskret stokastisk variabel $X$, fordi en binomialfordeling netop er et eksempel på en diskret stokastisk variabel X. I en binomialfordeling er den stokastiske variabel $X$ defineret som antallet af succeser i $n$ uafhængige forsøg – og da udfaldet af sådan en variabel kun kan være heltal (f.eks. 0, 1, 2, ..., n), er $X$ per definition en diskret stokastisk variabel. Derfor giver det mening at starte med den generelle formel for middelværdi af diskrete stokastiske variabler når vi skal bevise formlen for middelværdi i en binomialfordeling. \n\nFormlen viser at middelværdien er summen af alle hændelser i værdimængden ganget med deres sandsynlighed."},
+      {
+        "skridt": "\\mu =\\sum_{r=0}^{n} x_r \\cdot p_r",
+          "argumentation": "Vi sammentrækker udtrykket ved sumtegnet."},
+      {
+        "skridt": "\\mu =\\sum_{r=0}^{n} r \\cdot p_r",
+          "argumentation": "Vi ændre notationen for $x_r$ til $r$ fordi at $x_r$ bare er antallet af succeser som i en binomialfordeling noteres med$r$."},
+      {
+        "skridt": "\\mu =\\sum_{r=1}^{n} r \\cdot p_r",
+          "argumentation": "Vi ændre 'r' i bunden af sumtegnet, fordi det tal der står dér i sumtegnet viser hvorfra summeringen starter og hvis den starter fra $r=0$ \nStarter den altså fra $0 \\cdot p_r$ og dette vil ikke have nogen effekt så det kan vi ligeså godt ændre"},
+      {
+        "skridt": "\\mu =\\sum_{r=01}^{n} r \\cdot P(X=r)",
+          "argumentation": "Vi ændre notationen for sandsynligheden til fra $p_r$ til notationen for formlen for sandsynligheden for at få $r$ succeser i $n$ forsøg i en binomial fordeling, som er noteret med $P(x=r)$."},
+      {
+        "skridt": "\\mu =\\sum_{r=1}^{n} r \\cdot K(n,r) \\cdot p^r \\cdot (1-p)^{n-r}",
+          "argumentation": "Vi erstatter notationen med selve formlen"},
+      {
+        "skridt": "\\mu =\\sum_{r=1}^{n} n \\cdot K(n-1,r-1) \\cdot p^r \\cdot (1-p)^{n-r}",
+          "argumentation": "Vi erstatter udtrykket for antallet af succeser $r$ ganget med binomialkoefficienten med udtrykket vi beviste i hjælpesætningen."},
+      {
+        "skridt": "\\mu = n \\cdot \\sum_{r=1}^{n} K(n-1,r-1) \\cdot p^r \\cdot (1-p)^{n-r}",
+          "argumentation": "Vi rykker antalsparameteren $n$, som er en konstant ud fra sumtegnet. Det kan vi gøre fordi et sumtegn har den egenkab: \n\n$\\sum_{r=0}^{n} a \\cdot b_r = a \\cdot \\sum_{r=0}^{n} b_r$ \n\nAltså summen af et udtryk der er ganget med en konstant er lig med konstanten ganget med summen af udtrykket."},
+      {
+        "skridt": "\\mu = n \\cdot \\sum_{r=1}^{n} K(n-1,r-1) \\cdot p^r \\cdot (1-p)^{n-r} \\Leftrightarrow n \\cdot \\sum_{r=1}^{n} p \\cdot (K(n - 1, r - 1) \\cdot p^{r - 1} \\cdot (1 - p)^{n - r})",
+          "argumentation": "Vi ved at formlen vi skal bevise indeholder sandsynlighedsparametern '$p$' og for at fremskaffe $p$p bruger vi denne potensregel: \n\n$a^r \\cdot a^s = a^{r+s}$ \n\nI udtrykket bruger vi det på denne måde til at ændre $p^r$ uden at ændre nogen matematisk betydning: \n\n$p^1 \\cdot p^{r-1} = p \\cdot p^{r-1} = p^{r-1 + 1} = p^r$ \n\nSå udtrykket ser nu sådan her ud: \n\n$n \\cdot \\sum_{r=1}^{n} K(n,r) \\cdot p \\cdot p^{r-1} \\cdot (1-p)^{n-r}$ \n\nOg dette kan omskrives til:\n\n$n \\cdot \\sum_{r=1}^{n} p \\cdot (K(n,r) \\cdot p^{r-1} \\cdot (1-p)^{n-r})$ \n\nParentesen er alene af ´pædagogisk' grund da den viser at 'p' bliver adskilt fra resten af udtrykket der er en del af sumtegnet, så at vi kan rykke 'p' ud foran sumtegnet."},
+      {
+        "skridt": "\\mu = n \\cdot p \\cdot \\sum_{r=1}^{n} (K(n - 1, r - 1) \\cdot p^{r - 1} \\cdot (1 - p)^{n - r})",
+          "argumentation": "Nu rykker vi $p$ ud foran sumtegnet."},
+      {
+        "skridt": "\\mu = n \\cdot p \\cdot \\sum_{r=1}^{m} (K(m, l) \\cdot p^l \\cdot (1 - p)^{m - l})",
+          "argumentation": "Nu ændre vi notationen i sumtegnet med disse udtryk: \n\n$m=n-1$\n\n$l = r-1$ \n\nDet er fordi at så har vi faktisk lavet en ny binomialfordeling, med antalsparameter $m$, sandsynlighedsparameter $p$ og hvor antal successer er noteret med $l$. Det er en fordel, at vi nu har omskrevet udtrykket til at indeholde en fuld binomialfordeling, fordi vi ved, at summen af sandsynlighederne for alle mulige udfald i en sandsynlighedsfordeling – og dermed også en binomialfordeling – altid er lig 1. Det skyldes, at en sandsynlighedsfordeling netop beskriver alle de måder, en stokastisk variabel kan opføre sig på, og summen af sandsynlighederne for alle disse udfald må nødvendigvis dække hele udfaldsrummet, altså $100%$."},
+      {
+        "skridt": "\\mu = n \\cdot p \\cdot \\sum_{r=1}^{m} (K(m, l) \\cdot p^l \\cdot (1 - p)^{m - l}) \\Leftrightarrow \\mu = n \\cdot p \\cdot 1 \\Leftrightarrow \\mu = n \\cdot p",
+          "argumentation": "Når summen derfor præcist svarer til en komplet binomialfordeling, kan vi erstatte hele summen med 1, hvilket i sidste trin i beviset reducerer udtrykket."},
+      {
+        "skridt": "\\mu = n \\cdot p",
+          "argumentation": "Dermed er ovenstående sætning bevist $\\blacksquare$"}
+        ]
+      },
+    {
+      "bevis": "5) Differentialkvotienten til en vektorfunktion",
+      "sætning": "Sætning: Hvis de reelle koordinatfunktioner 𝒙(𝒕) og 𝒚(𝒕) er differentiable i 𝒕𝟎 er vektorfunktionen \n$\\vec{s}(t) = \\begin{pmatrix} x(t) \\\\ y(t) \\end{pmatrix}$ differentiabel i 𝒕𝟎 med differentialkvotienten \n$\\vec{s}'(t_0) = \\begin{pmatrix} x'(t_0) \\\\ y'(t_0) \\end{pmatrix}$",
+      "udførelse": [
+        {
+          "skridt": "\\Delta t = (t_0 + h) - t_0 = h",
+          "argumentation": "Som sætningen fortæller os så baserer vi beviset på forudsætningen om at de reelle funktioner $x(t)$ og $y(t)$ er differentiable i punktet $t_0$. Reelle funktioner er funktioner hvor at der må højst være én y-værdi til hver værdi i definitionsmængden. Målet med beviset er at bevise hvis en vektorfunktion $s(t)$ består af to relle funktioner $x(t)$ og $y(t)$ som begge er differentiable i $t_0$ så er funktionen $s(t)$ differentiabel ved $t_0$ med: \n\n $\\vec{s}'(t) = \\begin{pmatrix} x'(t_0) \\\\ y'(t_0) \\end{pmatrix}$. \n\nVi beviser at $x(t)$ og $y(t)$ er differentiable i $t_0$ med tretrinsreglen: \n\n1. Bestem differenskvotienten \n2. Omskriv differenskvotienten \n3. Undersøg om differenskvotienten har en grænseværdi for $\\Delta x \\to 0$ og i så fald bestem differentialkvotienten. \n\nDet første skridt i tretrinsreglen er som sagt at bestemme differenskvotienten, og vi har to funktioner $x(t)$ og $y(t)$ som vi skal bestemme differenskvotienten for hver især. \n Differenskvotienten for $x(t)$ er hældningen af sekanten (linje der går gennem to punkter) der går gennem punkterne: \n$(t_0 , x(t_0))$ og $(t_0 + h , x(t_0 + h))$ \n\nOg differenskvotienten for $y(x)$ er hældningen af sekanten der går gennem punkterne:\n$(t_0 , y(t_0))$ og $(t_0 + h , y(t_0 + h))$ \n\nNår vi skal bestemme differenskvotienten, gør vi brug af to-punkts-formlen der bestemmer hældningen 'a' på en linje der går gennem to punkter: \n\n$a = \\frac{y_2 - y_1}{x_2 - x_1}$ \n\nFormlen bestemmer hældningen for en linje der går gennem 2 vilkårlige punkter: $(x_1 , y_1)$ og $(x_2 , y_2)$ ved at dividere de to punkters forskel i funktionsværdi med de to punkters forskel i x-værdi. \n\nHvis vi anvender formlen på vores to funktioner \n$x(t)$ i punkterne $(t_0 , x(t_0))$ og $(t_0 + h , x(t_0 + h))$ \n$y(t)$ i punkterne $(t_0 , y(t_0))$ og $(t_0 + h , y(t_0 + h))$ , \n\nSå betyder det at vi kan bestemme deres differenskvotienter med disse brøker: \n\n$\\frac{x(t_0 + h) - x(t_0)}{(t_0 + h) - t_0}$ \n\n$\\frac{y(t_0 + h) - y(t_0)}{(t_0 + h) - t_0}$ \n\nFørste skridt i beviset er altså at opnå disse to udtryk fordi at de er hver især differenskvotienterne for $x(t)$ og $y(t)$ . \n\nDerfor starter beviset med at reducerer udtrykket for forskellen i t-værdi ($\\Delta t$) mellem de to punkter, til 'h'"},
+        {
+          "skridt": "\\Delta \\vec{s} = \\vec{s}(t_0 + h) - \\vec{s}(t_0)",
+          "argumentation": "Som formlen viser skal vi også bruge forskellen i funktionsværdier, $\\Delta \\vec{s}$, til at bestemme differenskvotienten. \nDet gøres ved at trække de to funktionsværdier  $s(t_0 + h)$ og $s(t_0)$ fra hinanden"},
+        {
+          "skridt": "\\frac{\\Delta \\vec{s}}{h} = \\frac{\\vec{s}(t_0 + h) - \\vec{s}(t_0)}{h}",
+          "argumentation": "Nu tager vi fat i formlen for differenskvotienten of indsætter vi vores udtryk for forskellen i funktionsværdier for $s(t)$ og erstatter $\\Delta t$ med 'h' som var det vi bestemte $\\Delta t$ til at være i første skridt"},
+        {
+          "skridt": "\\frac{\\Delta \\vec{s}}{h} = \\frac{1}{h} \\cdot (\\vec{s}(t_0 + h) - \\vec{s}(t_0))",
+          "argumentation": "Nu rykker vi $\\frac{1}{h}$ ud fra differenskvotient brøken og væk fra $\\vec{s}(t)$ for at kunne omskrive udtrykket ved at indsætte funktionsforskriften for $\\vec{s}(t)$ som er givet i bevissætningen og der efter gange brøken $\\frac{1}{h}$ som en konstant på vektoren."},
+        {
+          "skridt": "\\frac{\\Delta \\vec{s}}{h} = \\frac{1}{h} \\cdot \\left(\\begin{pmatrix} x(t_0 + h) \\\\ y(t_0 + h) \\end{pmatrix} - \\begin{pmatrix} x(t_0) \\\\ y(t_0) \\end{pmatrix} \\right) = \\frac{\\Delta \\vec{s}}{h} = \\frac{1}{h} \\cdot \\begin{pmatrix} x(t_0 + h) - x(t_0) \\\\ y(t_0 + h) - y(t_0) \\end{pmatrix}",
+          "argumentation": "Vi indsætter funktionsforskriften for $\\vec{s}(t)$ som er givet i bevissætningen, husk at anvend de to t-værdier for de to forskellige punkter som input til $x(t)$ og $y(t)$"},
+        {
+          "skridt": "\\frac{\\Delta \\vec{s}}{h} = \\frac{\\Delta \\vec{s}}{h} = \\frac{1}{h} \\cdot \\begin{pmatrix} x(t_0 + h) - x(t_0) \\\\ y(t_0 + h) - y(t_0) \\end{pmatrix} = \\begin{pmatrix} \\frac{x(t_0 + h) - x(t_0)}{h} \\\\ \\frac{y(t_0 + h) - y(t_0)}{h} \\end{pmatrix}",
+          "argumentation": "Vi ganger konstanten som er en brøk der består af $1$ divideret med forskel i t-værdi ind i vektoren med reglen: \n\n$a \\cdot \\begin{pmatrix} b \\\\ c \\end{pmatrix} = \\begin{pmatrix} a \\cdot b \\\\ a \\cdot c \\end{pmatrix}$"},
+        {
+          "skridt": "\\frac{\\Delta \\vec{s}}{h} = \\begin{pmatrix} \\frac{x(t_0 + h) - x(t_0)}{h} \\\\ \\frac{y(t_0 + h) - y(t_0)}{h} \\end{pmatrix}",
+          "argumentation": "Nu har vi bestemt og omskrevet differenskvotienten for $\\vec{s}(t)$ til at indeholde differenskvotienterne for $x(t)$ og $y(t)$ og derfor kan vi gå til sidste skridt af tretrinsreglen og anvende $\\lim_{h \\to 0}$ på $\\vec{s}(t)$"},
+        {
+          "skridt": "\\lim_{h \\to 0} \\frac{\\Delta \\vec{s}}{h} = \\lim_{h \\to 0} \\begin{pmatrix} \\frac{x(t_0 + h) - x(t_0)}{h} \\\\ \\frac{y(t_0 + h) - y(t_0)}{h} \\end{pmatrix}",
+          "argumentation": "Nu anvender vi $\\lim_{h \\to 0}$ på differenskvotienten for $\\vec{s}(t)$"},
+        {
+          "skridt": "\\lim_{h \\to 0} \\frac{\\Delta \\vec{s}}{h} = \\lim_{h \\to 0} \\begin{pmatrix} \\frac{x(t_0 + h) - x(t_0)}{h} \\\\ \\frac{y(t_0 + h) - y(t_0)}{h} \\end{pmatrix} = \\begin{pmatrix} x'(t_0) \\\\ y'(t_0) \\end{pmatrix}",
+          "argumentation": "Vi har anvendt $\\lim_{h \\to 0}$ på differenskvotienten for $\\vec{s}(t)$ fordi at vi vidste hvad grænseværdierne for det omskrevet udtryk var så har vi nu bestemt differentialkvotienten for $\\vec{s}(t)$"},
+        {
+          "skridt": "\\vec{s}'(t) = \\begin{pmatrix} x'(t_0) \\\\ y'(t_0) \\end{pmatrix}",
+          "argumentation": "Dermed er ovenstående sætning bevist $\\blacksquare$"}
+    ]
+    },
+    {
+      "bevis": "6) Bevis Tangentplan",
+      "sætning": "Lad 𝒇(𝒙, 𝒚) være en funktion af to variable, og lad punktet 𝑷(𝒙𝟎, 𝒚𝟎, 𝒛𝟎) være et punkt på grafen for 𝒇(𝒙, 𝒚). \n\n Tangentplanen for 𝒇(𝒙, 𝒚) i punktet 𝑷 er givet ved ligningen: \n\n𝒛 = $f_x$′(𝒙𝟎, 𝒚𝟎)(𝒙 − 𝒙𝟎) + $f_y$'(𝒙𝟎, 𝒚𝟎)(𝒚 − 𝒚𝟎) + 𝒇(𝒙𝟎, 𝒚𝟎)",
+      "udførelse": [
+        {
+          "skridt": "Introduktion",
+          "argumentation": "Vi skal bevise at tangentplanen til en funktion $f(x,y)$ i punktet $(x_0, y_0, z_0)$ har ligningen: \n\n$z= f_{x}'(x_0, y_0)\\cdot(x-x_0)+f_{y}'(x_0, y_0)\\cdot(y-y_0)+f(x_0, y_0)$\n\nVi er også givet noget information på første side af kompendiet omkring nogle definitioner og forudsætninger som vi kan gøre brug af til beviset. For det første får vi at vide at et tangentplan i punktet $(x_0, y_0, z_0)$ kan beskrives med følgende ligning:\n\n$0=a(x-x_0) + b(y-y_0) + c(z-z_0)$ \n\nHvor at vi også får at vide at $a$, $b$ og $c$ udgør normalvektoren til tangentplanet: \n\n$\\vec{n} = \\begin{pmatrix} a \\\\ b \\\\ c \\end{pmatrix}$  \n\nDet vil altså sige at denne vektor står vinkelret på tangentplanen og at den som være ortorgonal med alle vektore der følger tangentplanet. \n\nVi får også at vide at ortogonale vektore med 3 dimensioner er defineret ved at prikproduktet af dem er lig 0. Eksempel på to ortogonale vektore $\\vec{a}$ og $\\vec{b}$: \n\n$\\vec{a} = \\begin{pmatrix} a_1 \\\\ a_2 \\\\ a_1 \\end{pmatrix}$ \n\n$\\vec{b} = \\begin{pmatrix} b_1 \\\\ b_2 \\\\ b_1 \\end{pmatrix}$ \n\nDisse to vektore er ortorgonale hvis prikproduktet giver $0$:\n\n$\\vec{a} \\cdot \\vec{b} = a_1 \\cdot b_1 + a_2 \\cdot b_2 + a_3 \\cdot b_3 = 0$"},
+        {
+          "skridt": "\\begin{align*} a_x &= f'_x(x_0, y_0) \\\\ a_y &= f'_y(x_0, y_0) \\end{align*}",
+          "argumentation": "Vi starter med at definere variabelnavne for de partielt afledte af $f(x,y)$ i punktet $(x_0, y_0)$. \n\nDet vi har gjort er at vi har defineret to variabler, hvor den ene kaldes $a_x$, som er lig den partielt afledte af $f(x,y)$ i punktet $(x_0, y_0, z_0)$ med hensyn til $x$. Dette betyder at denne variabel beskriver hældningen af tangentplanet i punktet $(x_0, y_0, z_0)$ i retning af $x$-aksen. Med andre ord kan man også sige at denne variabel fortæller os hvor meget $z$ ændre sig med når $x$ ændre sig i punktet $(x_0, y_0, z_0)$. \n\nDen anden variabel $a_y$ er lig den partielt afledte af $f(x,y)$ i punkt og gør de samme ting som $a_x$ bare med hensyn til ændring i $z$ i forhold til ændring i $y$-aksen."},
+        {
+          "skridt": "\\vec{v} = \\begin{pmatrix} 1 \\\\ 0 \\\\ a_x \\end{pmatrix} \\vec{w} = \\begin{pmatrix} 0 \\\\ 1 \\\\ a_y \\end{pmatrix}",
+          "argumentation": "Nu definerer vi to vektore fordi som sagt er vi jo givet en beskrivelse for en ligning der beskriver et tangentplan, og det er godt sted at starte at bruge det vi ved og så kan det være at vi kan begynde at rykke rundt på den. \n\nSom sagt så er det denne ligning vi starter beviset med at lave\n\n$0=a(x-x_0) + b(y-y_0) + c(z-z_0)$ \n\nHvor at $a$, $b$ og $c$ udgør normalvektoren til tangentplanet. Derfor laver vi en vektor $\\vec{v}$ der er parallel med x-aksen og viser hvor meget $z$ ændrer sig når man bevæger sig $1$ hen af x-aksen, vektoren beskriver altså hældningen i $xz$-planet. Vi laver os en vektor $\\vec{w}$ der er parallel med y-aksen og viser hvor meget $z$ ændrer sig når man bevæger sig $1$ hen af y-aksen, vektoren beskriver altså hældningen i $yz$-planet. \n\nSå siden de her to vektore beskriver begge hældninger i tangentplanet, så skal normalvektoren til tangentplanet være ortogonal med begge vektore."},
+        {
+          "skridt": "\\begin{align*} \\begin{pmatrix} a \\\\ b \\\\ c \\end{pmatrix} \\cdot \\begin{pmatrix} 1 \\\\ 0 \\\\ a_x \\end{pmatrix} &= 0 \\\\ \\begin{pmatrix} a \\\\ b \\\\ c \\end{pmatrix} \\cdot \\begin{pmatrix} 0 \\\\ 1 \\\\ a_y \\end{pmatrix} &= 0 \\end{align*}",
+          "argumentation": "Nu skal vi bestemme normalvektoren til tangentplanet for at kunne opstille den ligning som vi ved gælder. \n\nVi ved at normalvektoren til tangentplanet er ortogonal med vektoren $\\vec{v}$ og vektoren $\\vec{w}$ og det betyder at prikproduktet skal være lig 0. Med denne viden kan vi lave et ligningssystem med brug af reglen til hvordan man bestemmer prikrpoduktet af vektore med 3 dimensioner: \n\n$\\vec{a} \\cdot \\vec{b} = a_1 \\cdot b_1 + a_2 \\cdot b_2 + a_3 \\cdot b_3$"},
+        {
+          "skridt": "\\begin{align*} a \\cdot 1 + b \\cdot 0 + c \\cdot a_x &= 0 \\\\ a + c a_x &= 0 \\\\ a &= - c a_x \\tag{1} \\\\ \\\\ a \\cdot 0 + b \\cdot 1 + c \\cdot a_y &= 0 \\\\ b + c a_y &= 0 \\\\ a &= - c a_y\\tag{2} \\end{align*}",
+          "argumentation": "Vi ændre beskrivelserne for ligningssystemet ved at anvende formlen for skalarproduktet af to vektore med 3 dimensioner. Vi kan også hurtigt reducere os frem til udtryk for både $a$ og $b$ værdierne i normalvektoren ved at isolere dem i hver af de to ligninger."},
+        {
+          "skridt": "\\vec{n} = \\begin{pmatrix} a \\\\ b \\\\ c \\end{pmatrix} = \\begin{pmatrix} -c a_x \\\\ -c a_y \\\\ c \\end{pmatrix}",
+          "argumentation": "Okay efter vores reducering af ligningssystemet har vi nu beskrivelser for værdierne $a$ og $b$ i normalvektoren, men vi kender jo stadig ikke $c$?. \n\nMen faktisk så kan vi godt bestemme $c$, fordi at normalvektore har den egenskab at de stadig er normalvektore uagtet af hvad længden er på dem så længe den ikke er 0. \nDet vil sige at en normalvektor $\\vec{n}$ er også en normalvektor hvis den bliver ganget med en konstant $k$, hvor $k$ ikke er 0. Eftersom alle værdier i den normalvektor vi har reduceret os frem til er ganget med $c$ som jo også er en konstant så er det stadig en normalvektor hvis den ikke bliver ganget med $c$. Så længe at vi fjerne $c$ for alle værdierne. \n\n$\\vec{n} = \\begin{pmatrix} a \\\\ b \\\\ c \\end{pmatrix} = \\begin{pmatrix} -c\\cdot a_x \\\\ -c \\cdot a_y \\\\ c \\cdot 1 \\end{pmatrix}$ \n\n$\\vec{n} = \\begin{pmatrix} a \\\\ b \\\\ c \\end{pmatrix} = c\\cdot \\begin{pmatrix} - a_x \\\\ - a_y \\\\ 1 \\end{pmatrix} \\Leftrightarrow \\begin{pmatrix} - a_x \\\\ - a_y \\\\ 1 \\end{pmatrix}$"},
+        {
+          "skridt": "\\vec{n} = \\begin{pmatrix} - a_x \\\\ - a_y \\\\ 1 \\end{pmatrix}",
+          "argumentation": "Nu har vi defineret normalvektoren til tangentplanet og vi kan nu indsætte den i den ligning vi er givet i starten til at beskrive tangentplanet."},
+        {
+          "skridt": "0 = a(x - x_0) + b(y - y_0) + c(z - z_0) \\Leftrightarrow 0 = -a_x(x - x_0) - a_y(y - y_0) + 1(z - z_0)",
+          "argumentation": "Nu Indsætter vi vores værdier for $a$, $b$ og $c$ i den ligning vi er givet i starten til at beskrive tangentplanet."},
+        {
+          "skridt": "0  = -a_x(x - x_0) - a_y(y - y_0) + (z - z_0) \\Leftrightarrow 0  = -a_x(x - x_0) - a_y(y - y_0) + z - z_0",
+          "argumentation": "Vi ganger parentesen ud og ophæver den sidste parentes"},
+        {
+          "skridt": " a_x(x - x_0) + a_y(y - y_0) + z_0 = z ",
+          "argumentation": "Vi rykker alle andre led end $+z$ over på venstre side af lighedstegnet og ændre fortegn, så vi kan isolere $z$"},
+        {
+          "skridt": "z =  a_x(x - x_0) + a_y(y - y_0) + z_0 \\Leftrightarrow z =  f_x'(x_0, y_0)(x - x_0) + f_y'(x_0, y_0)(y - y_0) + f(x_0, y_0)",
+          "argumentation": "Vi bytter rundt på lighedstegner for at det ser ordentligt ud også erstatter vi $a_x$, $a_y$ og $z_0$ med deres matematiske definitioner."},
+        {
+          "skridt": "z = f_x'(x_0, y_0)(x - x_0) + f_y'(x_0, y_0)(y - y_0) + f(x_0, y_0)",
+          "argumentation": "Dermed er ovenstående sætning bevist $\\blacksquare$"}
+      ]
+    },
+    {
+      "bevis": "7) Bevis for differentialkvotienten for 1/x",
+      "sætning": "Sætning: \n$f(x) = \\frac{1}{x}$,  hvor $x \\cancel{=} 0$, er differentiabel i $x_0$, med differentialkvotienten $f'(x_0) = -\\frac{1}{x_0^2}$",
+      "udførelse": [
+        {
+          "skridt": "\\Delta x = (x_0 + h) - x_0 = h",
+          "argumentation": "Det er et bevis for en differentialkvotient, så vi skal følge tretrinsreglen: \n\n1. Bestem differenskvotienten \n2. Omskriv differenskvotienten \n3. Undersøg om differenskvotienten har en grænseværdi og i så fald bestem differentialkvotienten. \n\nDet første skridt i tretrinsreglen er som sagt at bestemme differenskvotienten, og det betyder at vi skal bestemme hældningen af sekanten der går gennem punkterne: \n$(x_0 , f(x_0))$ og $(x_0 + h , f(x_0 + h))$ \n\nSå derfor skal vi bestemme forskellen i x-værdi mellem de to punkter, og det gør vi ved at trække $x_0$ fra $x_0 + h$ og vi får 'h'."},
+        {
+          "skridt": "\\Delta y = f(x_0 + h) - f(x_0)",
+          "argumentation": "Vi bestemmer forskellen i funktionsværdi, $\\Delta y$, for $f(x)$ i punkterne $(x_0, f(x_0))$ og $(x_0+h, f(x_0+h))$"},
+        {
+          "skridt": " \\Delta y = \\frac{1}{x_0 + h} - \\frac{1}{x_0}",
+          "argumentation": "Vi indsætter funktionsforskriften for $f(x)$ og vi har nu et udtryk for forskellen i funktionsværdi for $f(x)$ i punkterne $(x_0, f(x_0))$ og $(x_0+h, f(x_0+h))$"},
+        {
+          "skridt": " \\Delta y = \\frac{1}{x_0 + h} - \\frac{1}{x_0} = \\frac{x_0}{x_0 \\cdot (x_0 + h)} - \\frac{1 \\cdot (x_0 + h)}{x_0 \\cdot (x_0 + h)}",
+          "argumentation": "Vi anvender reglen der gør at to brøker med forskellige nævnere kan blive trukket fra hinanden: \n\n$\\frac{a}{b} - \\frac{c}{d} = \\frac{a \\cdot d}{b \\cdot d} - \\frac{c \\cdot b}{d \\cdot b} = \\frac{a \\cdot d - c \\cdot b}{b \\cdot d} $\n\nFordi så kan vi reducere udtrykket for forskel i funktionsværdi"},
+        {
+          "skridt": "\\Delta y = \\frac{x_0 - (x_0 + h)}{x_0 \\cdot (x_0 + h)} \\Leftrightarrow \\Delta y = \\frac{-h}{x_0(x_0 + h)}",
+          "argumentation": "Vi reducere udtrykket for forskel i funktionsværdi"},
+        {
+          "skridt": "\\frac{\\Delta y}{\\Delta x} = \\frac{\\Delta y}{h} = \\frac{f(x_0 + h) - f(x_0)}{h}",
+          "argumentation": "Med vores reducering kan vi nu opstille udtrykket for differenskvotienten af $f(x_0)$."},
+        {
+          "skridt": "\\frac{\\Delta y}{h} =\\frac{\\frac{-h}{x_0(x_0 + h)}}{h}",
+          "argumentation": "Nu indsætter vi det reducerede udtryk for forskel i funktionsværdi for $f(x)$ i punkterne $(x_0, f(x_0))$ og $(x_0+h, f(x_0+h))$ \n\nOg dermed har vi klaret trin 1 med at bestemme differenskvotienten for $f(x)$ så nu skal vi omskrive den så vi kan bestemme grænseværdierne og dermed differentialkvotienten."},
+        {
+          "skridt": "\\frac{\\Delta y}{h} =\\frac{\\frac{-h}{x_0(x_0 + h)}}{h} \\Leftrightarrow \\frac{\\Delta y}{h} = \\frac{-1}{x_0(x_0 + h)}",
+          "argumentation": "Vi omskriver brøken med reglen: \n\n$\\frac{a}{\\frac{b}{c}} = \\frac{a}{b \\cdot c} $\n\nNår vi anvender den på udtrykket: \n\n$\\frac{-h}{\\frac{x_0(x_0 + h)}{h}} = \\frac{- h}{x_0(x_0 + h) \\cdot h} = \\frac{-1 \\cancel{\\cdot h}}{x_0(x_0 + h) \\cancel{\\cdot h}}$"},
+        {
+          "skridt": "\\frac{\\Delta y}{h} = -\\frac{1}{x_0(x_0 + h)}",
+          "argumentation": "Nu er differenskvotienten omskrevet til et udtryk hvor vi kan bestemme grænseværdien fordi at $h$ bliver gjort lille uden at vi risikere at brøken får en nævner der er lig 0."},
+            {
+              "skridt": "\\lim_{h \\to 0} \\frac{\\Delta y}{h} = \\lim_{h \\to 0} ( \\frac{-1}{x_0(x_0 + h)}) = - \\left( \\frac{1}{x_0(x_0 + 0)} \\right)",
+        "argumentation": "Nu bestemmer vi grænseværdien for udtrykket med $\\lim_{h \\to 0}$"},
+            {
+              "skridt": "\\lim_{h \\to 0} \\frac{\\Delta y}{h} = \\frac{-1}{x_0 \\cdot x_0} = - \\frac{1}{x_0^2} ",
+        "argumentation": "Vi reducerer udtrykekt"},
+            {
+              "skridt": "\\lim_{h \\to 0} \\frac{\\Delta y}{h} = - \\frac{1}{x_0^2} \\Leftrightarrow f'(x_0) = - \\frac{1}{x_0^2}",
+        "argumentation": "Nu har vi succesfuldt fundet grænseværdien og kan ændre $\\lim_{h \\to 0} \\frac{\\Delta y}{h}$ til differentialkvotienten for $f(x)$ i punktet $x_0$."},
+            {
+              "skridt": "f'(x_0) = - \\frac{1}{x_0^2}",
+        "argumentation": "Dermed er ovenstående sætning bevist $\\blacksquare$"}
+      ]
+    },
+    {
+      "bevis": "7) Bevis for differentialkvotienten for x^2",
+      "sætning": "Sætning: \n$f(x) = x^2$, er differentiabel i $x_0$, med differentialkvotienten $f'(x_0) = 2x_0$",
+      "udførelse": [
+        {
+          "skridt": "\\Delta x = (x_0 + h) - x_0 = h",
+          "argumentation": "Det er et bevis for en differentialkvotient, så vi skal følge tretrinsreglen: \n\n1. Bestem differenskvotienten \n2. Omskriv differenskvotienten \n3. Undersøg om differenskvotienten har en grænseværdi og i så fald bestem differentialkvotienten. \n\nDet første skridt i tretrinsreglen er som sagt at bestemme differenskvotienten, og det betyder at vi skal bestemme hældningen af sekanten der går gennem punkterne: \n$(x_0 , f(x_0))$ og $(x_0 + h , f(x_0 + h))$ \n\nSå derfor skal vi bestemme forskellen i x-værdi mellem de to punkter, og det gør vi ved at trække $x_0$ fra $x_0 + h$ og vi får 'h'."},
+        {
+          "skridt": "\\Delta y = f(x_0 + h) - f(x_0)",
+          "argumentation": "Vi bestemmer forskellen i funktionsværdi, $\\Delta y$, for $f(x)$ i punkterne $(x_0, f(x_0))$ og $(x_0+h, f(x_0+h))$"},
+        {
+          "skridt": " \\Delta y = (x_0 + h)^2 - (x_0)^2",
+          "argumentation": "Vi indsætter funktionsforskriften for $f(x)$ og vi har nu et udtryk for forskellen i funktionsværdi for $f(x)$ i punkterne $(x_0, f(x_0))$ og $(x_0+h, f(x_0+h))$"},
+        {
+          "skridt": " \\Delta y = (x_0 + h)^2 - (x_0)^2 \\Leftrightarrow \\Delta y = x_0^2 + 2x_0 h + h^2 - x_0^2",
+          "argumentation": "Vi ophæver parenteserne ved at gange dem ud. \n\nDen ene har form som den første kvadratsætning, der har denne udregning: \n\n$(a+b)^2 = a^2 + b^2 + 2ab$"},
+        {
+          "skridt": "\\Delta y = 2x_0 h + h^2",
+          "argumentation": "Vi reducere udtrykket for forskel i funktionsværdi så meget som muligt"},
+        {
+          "skridt": "\\frac{\\Delta y}{\\Delta x} = \\frac{\\Delta y}{h} = \\frac{f(x_0 + h) - f(x_0)}{h}",
+          "argumentation": "Med vores reducering kan vi nu opstille udtrykket for differenskvotienten af $f(x_0)$."},
+        {
+          "skridt": "\\frac{\\Delta y}{h} = \\frac{2x_0 h + h^2}{h}",
+          "argumentation": "Nu indsætter vi det reducerede udtryk for forskel i funktionsværdi for $f(x)$ i punkterne $(x_0, f(x_0))$ og $(x_0+h, f(x_0+h))$ \n\nOg dermed har vi klaret trin 1 med at bestemme differenskvotienten for $f(x)$ så nu skal vi omskrive den så vi kan bestemme grænseværdierne og dermed differentialkvotienten."},
+        {
+          "skridt": "\\frac{\\Delta y}{h} = \\frac{2x_0 h + h^2}{h} = \\frac{2x_0 \\cdot \\cancel{h} + h \\cdot \\cancel{h}}{\\cancel{h}} = 2x_0 + h",
+          "argumentation": "Vi omskriver og reducere brøken fordi at der bliver ganget med '$h$' i nævneren og der optræder et '$h$' i hvert led i tælleren. Derfor kan vi slette ét '$h$' fra hvert led i tælleren og dermed også '$h$' fra nævneren."},
+        {
+          "skridt": "\\frac{\\Delta y}{h} = 2x_0 + h",
+          "argumentation": "Trin 2 er nu klaret fordi at vi har nu omskrevet differenskvotienten til et udtryk hvor vi kan bestemme grænseværdien."},
+        {
+          "skridt": "\\lim_{h \\to 0} \\frac{\\Delta y}{h} = \\lim_{h \\to 0} (2x_0 + h)",
+          "argumentation": "Vi bestemmer grænseværdien af differenskvotienten ved at anvende $\\lim_{h \\to 0}$"},
+        {
+          "skridt": "\\lim_{h \\to 0} \\frac{\\Delta y}{h} = \\lim_{h \\to 0} (2x_0 + 0) \\Leftrightarrow \\lim_{h \\to 0} \\frac{\\Delta y}{h} = 2x_0",
+          "argumentation": "Vi har succesfuldt bestemt grænseværdien for differenskvotienten og kan derfor ændre $\\lim_{h \\to 0} \\frac{\\Delta y}{h}$ til differentialkvotienten for $f(x)$ i punktet $x_0$."},
+        {
+          "skridt": "f'(x_0) = 2x_0",
+          "argumentation": "Dermed er ovenstående sætning bevist $\\blacksquare$"}
+      ]
+    },
+    {
+      "bevis": "8/9) Differentialligningsbevis: Logistisk vækst",
+      "sætning": "Differentialligningen $y' = y(b - ay), \\quad a, b \\ne 0$ \n\nHar de ikke-trivielle løsninger: $y(x) = \\frac{\\frac{b}{a}}{1 + c e^{-bx}}, \\quad$ hvor c er et tal.",
+      "udførelse": [
+        {
+          "skridt": "z=z(x)=\\frac{1}{y(x)}",
+          "argumentation": "Vi begynder beviset med at lave en 'hjælpefunktion', $z(x)$, som er en sammensat funktion der har den originale funktion, $y(x)$, som indre funktion. \n$y(x)$ er den funktion hvis generelle form er den generelle løsning til den givet differentialligning.\nDet er $y(x)$'s generelle form, som vi skal finde ud fra differentialligningen og beviset går ud på at vi skal bevise den metode der er til dét formål. \n\nEftersom vi skal bevise en løsning til differentialligninger, der har denne ikke-lineære form, skal vi tage denne 'omvej' til formål for at lave en differentialligning af hvor vi kender dens løsning. \n\nMålet med hjælpefunktionen er aflede den, for at ende med en differentialligning (der beskriver den afledte af hjælperfunktionen), der har en form hvor vi kender løsningen. Når vi så bestemmer løsningen til differentialligningen for hjælperfunktionen, så har vi jo bestemt en funktionsforskrift for hjælpefunktionen som jo er en sammensat funktion med vores originale funktion, $y(x)$, som indre funktion. Efter det kan vi isolere den originale funktion og bestemme dens funktionsforskrift. \n\nSå vi starter altså med at lave en sammensat funktion med den funktion vi ikke kender formen af, for så at aflede funktionen hvor vi kan anvende vores viden om dens afledte. \nOg når vi så har gjort det kan vi løse denne differentialligning for hjælpefunktionen og derefter isolere den originale funktion fra."},
+        {
+          "skridt": "z' = -\\frac{1}{y^2} \\cdot y'",
+          "argumentation": "Vi afleder hjælpefunktionen, $z(x)$, som er en sammensat funktion og derfor bruges kædereglen:\n\n$(f(g(x)))' = f'(g(x)) \\cdot g'(x)$ \n\nKædereglen har i øvrigt også den gode egenskab at den siger at man skal aflede den indre funktion, som i vores tilfælde jo er den afledte af $y(x)$. \nVi kender jo en betegnelse for den afledte af $y(x)$ fordi det er differentialligningen som vi i beviset skal bevise en løsning til."},
+        {
+          "skridt": "z' = -\\frac{1}{y^2} \\cdot y(b - ay)",
+          "argumentation": "Vi indsætter betegnelsen for $y'$, som vi kender fra differentialligningen i bevissætningen, ind på $y'$'s plads i udtrykket for $z'$"},
+        {
+          "skridt": "z' = -\\frac{1}{y} (b - ay)",
+          "argumentation": "Der er ét led i tælleren som ganges med $y$ og derfor går det $y$ ud med det ene $y$ i nævneren. Så det der sker er: \n\n $z' = -\\frac{1}{y \\cdot \\cancel{y}} \\cdot \\cancel{y}(b - ay)$"},
+        {
+          "skridt": "z' = -\\frac{b}{y} + \\frac{ay}{y} = -b \\cdot \\frac{1}{y} + a",
+          "argumentation": "Brøken: $-\\frac{1}{y}$ ganges ind i parentesen og vi kan reducere udtrykket."},
+        {
+          "skridt": "z' = -b \\cdot \\frac{1}{y} + a = - b \\cdot z + a= a - b \\cdot z",
+          "argumentation": "Vi erstatter $\\frac{1}{y}$ med $z$. Fordi at så er udtrykket for den afledte af $z$ en differentialligning hvor vi kender den generelle løsning: \n\nDifferentialligningen:\n$y' = b - a \\cdot y$ \n\nHar den generelle løsning:\n $y(x) = \\frac{b}{a} + c \\cdot e^{-ax}$"},
+        {
+          "skridt": "z(x) = \\frac{a}{b} + c_1 e^{-bx}",
+          "argumentation": "Vi bestemmer løsningen til differentialligningen for $z(x)$ ved brug af den generelle løsning til differentialligningen med formen: $y' = b - a \\cdot y$"},
+        {
+          "skridt": "\\frac{1}{y(x)} = \\frac{a}{b} + c_1 e^{-bx}",
+          "argumentation": "Erstatter $z(x)$ med dens funktionsforskrift, for at kunne isolere $y(x)$ og dermed bestemme dens funktionsforskrift."},
+        {
+          "skridt": "\\cancel{y(x)} \\cdot (\\frac{1}{\\cancel{y(x)}}) = y(x) \\cdot (\\frac{a}{b} + c_1 e^{-bx}) \\Leftrightarrow 1 = y(x) \\cdot (\\frac{a}{b} + c_1 e^{-bx})",
+          "argumentation": "Begynder at isolere $y(x)$ ved at gange begge sider af lighedstegnet med $y(x)$"},
+        {
+          "skridt": "\\frac{1}{\\frac{a}{b} + c_1 e^{-bx}} = \\frac{y(x) \\cdot \\cancel{(\\frac{a}{b} + c_1 e^{-bx}})}{\\cancel{\\frac{a}{b} + c_1 e^{-bx}}}",
+          "argumentation": "Isolerer $y(x)$ ved at dividere begge sider af lighedstegnet med $\\frac{a}{b} + c_1 e^{-bx}$. \n\nTil eksamen vil man også bare kunne sige at man bruger reglen:\n\n$\\frac{1}{a} = b \\Leftrightarrow a = \\frac{1}{b}$"},
+        {
+          "skridt": "y(x) = \\frac{1}{\\frac{a}{b} + c_1 e^{-bx}}",
+          "argumentation": "Nu har vi isoleret $y(x)$ men vi mangler at ændre på udtrykkets struktur for at det passer til det udtryk vi skal bevise."},
+        {
+          "skridt": "y(x) = \\frac{\\frac{b}{a} \\cdot 1}{\\frac{b}{a} \\left( \\frac{a}{b} + c_1 e^{-bx} \\right)} = \\frac{\\frac{b}{a}}{1 + \\left( \\frac{b}{a} \\cdot c_1 e^{-bx} \\right)} = \\frac{\\frac{b}{a}}{1 + c e^{-bx}}",
+          "argumentation": "Vi kan reducere brøken på højre side af lighedstegnet ved at gange tæller og nævner med $\\frac{b}{a}$ Fordi det svarer til at gange med $1$ og derfor ændrer det ikke på venstre side af lighedstegnet. \n\nBrøken bliver også ganget ind i parentesen i nævneren af brøken, og i første led:\n\n$\\frac{b}{a} \\cdot \\frac{a}{b} = 1$ \n\nOg i andet led bliver $c_1$ til $c$ fordi at $c_1$ er en konstant der bliver ganget med en anden konstant ($\\frac{b}{a}$) og dette kan reduceres sådan her:\n\n $\\frac{b}{a} \\cdot c_1 = c$ \n\nDe to konstanter bliver altså trukket sammen til én konstant som vi kalder $c$."},
+        {
+          "skridt": "y(x) = \\frac{\\frac{b}{a}}{1 + c e^{-bx}}",
+          "argumentation": "Dermed er ovenstående sætning bevist $\\blacksquare$."}
+          ]
+        },
+    {
+      "bevis": "8/9) Differentialligningsbevis: Forskudt eksponentiel vækst",
+      "sætning": "Differentialligningen $y' = b - ay, \\quad a, \\ne 0$ \n\nHar den fuldstændige løsning: $y(x) = \\frac{b}{a}+c e^{-ax}, \\quad$ hvor c er et tal.",
+      "udførelse": [
+        {
+          "skridt": "z = z(x) = b - a \\cdot y(x) = -a \\left( y(x) - \\frac{b}{a} \\right)",
+          "argumentation": "Vi vil bevise at differentialligningen $y' = b - ay$ har den fuldstændige løsning: $y(x) = \\frac{b}{a}+c e^{ax}$. Det gør vi ved at starte med at antage at der findes en løsning og på baggrund af den antagelse beviser at det er en løsning med den form. Så vi starter med at lave en hjælpefunktion $z(x)$ som er en sammensat funktion med den funktion vi ikke kender formen af, for så at aflede funktionen med kædereglen hvor vi kan anvende vores viden om differentialligningen altså den afledte."},
+        {
+          "skridt": "z' = -a \\cdot y'",
+          "argumentation": "Vi afleder efter kædereglen:\n\n$(f(g(x)))' = f'(g(x)) \\cdot g'(x)$ \n\nKædereglen har i øvrigt også den gode egenskab at den siger at man skal af"},
+        {
+          "skridt": "z'  = -a (b - a y)",
+          "argumentation": "Vi indsætter differentialligningen på $y'$"},
+        {
+          "skridt": "z'  = -a z",
+          "argumentation": "Vi erstatter y' med z fordi så har vi en. ny differentialligningen hvor vi kender løsningen og dette kan vi bruge til den anden løsning vi beviser."},
+        {
+          "skridt": "z(x) = c_1 e^{-a x}",
+          "argumentation": "Vi indsætter løsningen til differentialligningen for $z(x)$ som vi lavede ud fra en sammensatfunktion"},
+        {
+          "skridt": "-a \\left( y(x) - \\frac{b}{a} \\right) = c_1 e^{-a x}",
+          "argumentation": "Vi erstatter z(x) med dens forskfrift"},
+        {
+          "skridt": "y(x) - \\frac{b}{a} = c e^{-a x} ",
+          "argumentation": "Vi dividerer med $a$ på begge sider også bliver konstanten $c_1$ fordi det at det er en konstant der bliver divideret med en anden konstant, så kan reduceres ved at sammentrække dem til en konstant og give nyt navn"},
+        {
+          "skridt": "y(x) = \\frac{b}{a} + c e^{-a x} ",
+          "argumentation": "Dermed er ovenstående sætning bevist $\\blacksquare$"}
+      ]
+    },
+    {
+      "bevis": "10) Bayes' sætning",
+      "sætning": "Sætning (Bayes’): I et sandsynlighedsfelt (𝑼, 𝑷), hvor 𝑨 og 𝑩 er to vilkårlige hændelser, gælder \n\n $P(A|B) = \\frac{P(B|A) \\cdot P(A)}{P(B)}$",
+      "udførelse": [ 
+        {
+          "skridt": "P(A \\mid B) = \\frac{P(A \\cap B)}{P(B)}",
+          "argumentation": "Vi begynder med udtrykket for betinget sandsynlighed."},
+        {
+          "skridt": "P(A \\cap B) = P(A \\mid B) \\cdot P(B)",
+          "argumentation": "Vi isolerer udtrykket for fællesmængden ved at gange med $P(B)$ på begge sider."},
+        {
+          "skridt": "P(B \\mid A) = \\frac{P(B \\cap A)}{P(A)}",
+          "argumentation": "Nu tager vi fat i udtrykket for betinget sandsynlighed men hvor de to sandsynligheder er byttet om på."},
+        {
+          "skridt": "P(B \\cap A) = P(B \\mid A) \\cdot P(A)",
+          "argumentation": "Vi isolerer udtrykket for fællesmængden ved at gange med $P(A)$ på begge sider."},
+        {
+          "skridt": "P(B \\cap A) = P(A \\cap B)",
+          "argumentation": "Vi viser at vi ved at fællesmængden er den samme uagtet af rækkefølge af de to sandsynlighedsfelter."},
+        {
+          "skridt": "P(B \\mid A) \\cdot P(A) = P(A \\mid B) \\cdot P(B)",
+          "argumentation": "Nu indsætter vi de udtryk for fællesmængden vi har fundet."},
+        {
+          "skridt": "P(B \\mid A) \\cdot P(A) = P(A \\mid B) \\cdot P(B) \\Leftrightarrow \\frac{P(B \\mid A) \\cdot P(A)}{P(B)} = \\frac{P(A \\mid B) \\cancel{\\cdot P(B)}}{\\cancel{P(B)}}",
+          "argumentation": "Vi isolerer $P(A \\mid B)$ ved at dividere med $P(B)$ på begge sider."},
+        {
+          "skridt": "P(A \\mid B) = \\frac{P(B \\mid A) \\cdot P(A)}{P(B)}",
+          "argumentation": "Dermed er ovenstående sætning bevist $\\blacksquare$"}
+      ]
+    },
+    {
+      "bevis": "10) Bayes' udvidede sætning",
+      "sætning": "Lad B være en hændelse i et sandsynlighedsfelt (𝑼, 𝑷), og lad $A_1$, $A_2$, … , $A_k$ være disjunkte hændelser, så $A_1$ ∪ $A_2$ ∪ ⋯ ∪ $A_k$ = 𝑼. Da gælder, at \n\n$P(A_i|B) = \\frac{P(B|A_i) \\cdot P(A_i)}{P(B|A_1) \\cdot P(A_1) + P(B|A_2) \\cdot P(A_2) + ... + P(B|A_k) \\cdot P(A_k)}$",
+      "udførelse": [ 
+        {
+          "skridt": "P(A_i \\mid B) = \\frac{P(B \\mid A_i) \\cdot P(A_i)}{P(B)}",
+          "argumentation": "Vi begynder med udtrykket for Bayes' sætning som vi har bevist i beviset før det her."},
+        {
+          "skridt": "P(A_i \\mid B) = \\frac{P(B \\mid A_i) \\cdot P(A_i)}{P(B)}",
+          "argumentation": "Vi begynder med udtrykket for Bayes' sætning som vi har bevist i beviset før det her."},
+        {
+          "skridt": "P(B) = P(B \\mid A_1) \\cdot P(A_1) + P(B \\mid A_2) \\cdot P(A_2) + \\cdots + P(B \\mid A_k) \\cdot P(A_k)",
+          "argumentation": "Eftersom vi ved at sandsynlighedsfeltet består af disjunkte hændelser og at de udgør $U$ så kan vi bruge udtrykket for total sandsynlighed til at beskrive $P(B)$ \n\nUdtrykket for total sandsynlighed kan bruges fordi at vi ved at hver gang hændelsen $B$ $A_1,A_2,...,A_k$ indtræffer, må det ske i præcis én af de disjunkte hændelser. \n\nDet vil sige, at $B$ kan opdeles i bidrag fra hver enkelt $A_i$, og sandsynligheden for $B$ er derfor summen af sandsynlighederne for, at $B$ sker under forudsætning af hvert $A_i$, vægtet med sandsynligheden for netop det $A_i$"},
+        {
+          "skridt": "P(A_i \\mid B) = \\frac{P(B \\mid A_i) \\cdot P(A_i)}{P(B \\mid A_1) \\cdot P(A_1) + P(B \\mid A_2) \\cdot P(A_2) + \\cdot + P(B \\mid A_k) \\cdot P(A_k)}",
+          "argumentation": "Vi indsætter udtrykket for total sandsynlighed for $P(B)$ i udtrykket for Bayes' sætning."},
+        {
+          "skridt": "P(A_i \\mid B) = \\frac{P(B \\mid A_i) \\cdot P(A_i)}{P(B \\mid A_1) \\cdot P(A_1) + P(B \\mid A_2) \\cdot P(A_2) + \\cdot + P(B \\mid A_k) \\cdot P(A_k)}",
+          "argumentation": "Dermed er ovenstående sætning bevist $\\blacksquare"}
+      ]
+    },
+    {
+      "bevis": "11) Diskriminantformlen",
+      "sætning": "Andengradsligningen $ax^2 + bx + c = 0 (a \\cancel{=} 0)$ Har: \n\n- Ingen løsninger, hvis $d<0$\n\n- Løsningen $x=-\\frac{b}{2a}$ , hvis $d = 0$\n\n- De to løsninger $\\frac{-b+\\sqrt{d}}{2a}$ og $\\frac{-b-\\sqrt{d}}{2a}$  hvis $d>0$ \n\nHvor diskriminanten $d$ er bestemt som $d = b^2-4ac$.",
+      "udførelse": [
+        {
+          "skridt": "ax^2 + bx + c = 0",
+          "argumentation": "Vi begynder med udtrykket for andengradsligningen."},
+        {
+          "skridt": "4a \\cdot (ax^2 + bx + c) = 4a \\cdot 0",
+          "argumentation": "Vi ganger med $4a$ på begge sider fordi vi starter med at arbejder os hen imod at få definitionen for diskriminanten $d$, i dette udtryk, fordi udtrykket vi skal bevise indeholder $d$ i sig."},
+        {
+          "skridt": "4a^2x^2 + 4abx + 4ac = 4a \\cdot 0 \\Leftrightarrow 4a^2x^2 + 4abx + 4ac = 0",
+          "argumentation": "Vi ganger $4a$ ind i hvert led af parentesen og reducerer brøken"},
+        {
+          "skridt": "4a^2x^2 + 4abx + 4ac + (b^2 - 4ac) = 0 + (b^2 - 4ac) \\Leftrightarrow 4a^2x^2 + 4abx + b^2 = d",
+          "argumentation": "Vi lægger formlen for diskriminanten: \n\n$b^2 - 4ac$ \n\nTil på begge sider af lighedstegnet. Det gør at den højre side af lighedstegnet nu kan omskrives til $d$ fordi det ene og alene består af formlen for diskriminanten. Dette er godt fordi at det endelige udtryk vi beviser indeholder $d$. og nu har vi altså et nyt udtryk for $d$ som vi kan anvende."},
+        {
+          "skridt": "4a^2x^2 + 4abx + b^2 = d \\Leftrightarrow  (2ax + b)^2 = d",
+          "argumentation": "Vi reducerer vores nye udtryk for diskriminanten ved at lave kvadratkomplettering. Det betyder at vi opdagede at formen af udtrykket: \n\n $4a^2x^2 + 4abx + b^2$ \n\nSvarede til formen på resultatet af den første kvadratsætning, som er defineret som: 'kvadratet af første led lagt sammen med kvadratet af andet led lagt sammen med det dobbelte produkt' \nEller med en formel ser det sådan her ud:\n\n$(a+b)^2 = a^2 + b^2 + 2ab$ \n\nHer er kvadratet første led: $4a^2x^2$ og kvadratet andet led: $b^2$ og det dobbelte produkt: $4abx$. Og derfor for at lave kvadrakomplettering skal vi tage kvadratroden af $4a^2x^2$ og $b^2$ \n\n$\\sqrt{4a^2x^2} = 2ax$ \n\n$\\sqrt{b^2}=b$"},
+        {
+          "skridt": "(2ax + b)^2 = d",
+          "argumentation": "Nu har vi altså omskrevet udtrykket for funktionsværdien af en andengradsfunktion er lig 0 ved først at omskrive os frem til formlen for diskriminanten også indsætte $d$ og derfra har vi det her udtryk og det her udtryk kan faktisk bekræfte to af $d$'s egenskaber som vi satte os for at bevise. \nVi kan nemlig her se hvordan antallet af løsninger afhænger af værdien som $d$ har. Hvis $d$ er negativ har vi ingen løsninger fordi første skridt i at bestemme rødderne udfra $d$ i dette udtryk er at tage kvadratroden af begge sider og du kan ikke bestemme kvadratroden af et negativt tal. Hvis d er 0 så har vi én løsning og hvis $d$ er positiv så har vi to løsninger fordi kvadrat roden af et positivt tal har altid 2 løsninger i både en positiv og negativ version fordi at minus gange minus giver plus."},
+        {
+          "skridt": "\\sqrt{(2ax + b)^2} = \\pm \\sqrt{d} \\Leftrightarrow 2ax + b = \\pm \\sqrt{d}",
+          "argumentation": "For at kunne kommer videre med at bevise formlen for løsningerne til en andengradsligning så forudsætter vi os nu at $d≥0$, fordi det kræves for at der findes mindst én løsning. Og når det er antaget at $d≥0$ så kan vi tage kvadratroden af begge sider af lighedstegnet og begynde at isolere $x$. Dette bringer os tætter på løsningsformlen og viser samtidig diskrimanten $d$'s rolle i at bestemme løsningerne til en andengradsligning."},
+        {
+          "skridt": "2ax + b = \\pm \\sqrt{d} \\Leftrightarrow 2ax = -b + \\pm \\sqrt{d}",
+          "argumentation": "Vi rykker $b$ over på den anden side og ændre fortegn."},
+        {
+          "skridt": "2ax = -b + \\pm \\sqrt{d} \\Leftrightarrow x = \\frac{-b + \\pm \\sqrt{d}}{2a}",
+          "argumentation": "Vi dividerer med $2a$ på begge sider for at isolere $x$. Og kan nu se hvordan løsningerne afhænger af koeeficienterne $a$, $b$ og $c$ i den oprindelige andengradsligning og diskriminanten $d$."},
+        {
+          "skridt": "x = \\frac{-b + \\pm \\sqrt{d}}{2a}",
+          "argumentation": "Dermed er ovenstående sætning bevist $\\blacksquare$"}
+      ]
+    },
+    {
+      "bevis": "12) Vinklen mellem to egentlige vektore",
+    "sætning": "Hvis $\\vec{a}$ og $\\vec{b}$ er egentlige vektorer, og $v$ er vinkel mellem dem, gælder formlen: \n\n $cos(v)=\\frac{\\vec{a} \\cdot \\vec{b}}{|\\vec{a}| \\cdot |\\vec{b}|}$",
+    "udførelse": [
+      {
+      "skridt": "\\vec{a} \\cdot \\vec {b} = |\\vec{a}| \\cdot |\\vec {b}| \\cdot cos(v)",
+      "argumentation": "For at bevise formlen for vinklen mellem to vektorer, så starter vi faktisk med at bevise denne formel for skalarproduktet af to vektore: \n\n$\\vec{a} \\cdot \\vec {b} = |\\vec{a}| \\cdot |\\vec {b}| \\cdot cos(v)$\n\nFordi når den er bevist så kan vi bare isolere cos(v) og få formlen for vinklen mellem to vektorer."},
+      {
+        "argumentation": "Vi begynder beviset med at tegne de to egentlige vektore (to vektore der IKKE er nul-vektoren) $\\vec{a}$ og $\\vec{b}$ ind i et koodinatsystem, med vinklen imellem dem noteret med $v$. $\\vec{a}$ er placeret langs x-aksen og $\\vec{b}$ over $\\vec{a}$.\n\n I matematik så kan en vektor beskrives med kartesiske koordinater, og det er bare de normale, man skal ikke kunne begrebet det er bare fun fact. Men en vektor kan også beskrives med polære koordinater. Her er vektoren beskrevet med dens længde og vinkel. \n\nEksempel på en vilkårlig vektor $\\vec{a}$ med en længde på 5 og en vinkel på 45 grader beskrevet med polære korrdinater: \n\n$\\vec{a}=(5, 45^{\\circ})$ \n\n Denne vinkel som en vektor 'har', er defineret som vinklen målt fra den positive akse, mod uret, til vektoren. Derfor har vektore som $\\vec{b}$ og $\\vec{a}$ også hver deres vinkler tilknyttet til sig. Som sagt skal vi bestemme en formel for vinklen mellem to vektore, så ved at vi i starten af beviset placerer $\\vec{a}$ på x-aksen så har vi automatisk sat $\\vec{b}$'s vinkel til at være den vinkel der er mellem de to vektore $\\vec{a}$ og $\\vec{b}$ fordi at $\\vec{b}$'s vinkel jo som sagt måles fra den positive akse og mod uret, og nu ligger $\\vec{a}$ på den positive akse. Det er nemmere fordi så har vi ikke nogle ligegyldige vinkler at tage højde for og så bliver beviset nemmere. \n\nMen hvorfor kan vi 'bare' placere $\\vec{a}$ her?\nDet skal vi argumentere for inden vi går videre til at bevise formlen for vinklen mellem to vektore.",
+        "billede": "billeder/vinkelmellemtovektore.png"},
+      {
+      "skridt": "|\\vec{a}-\\vec{b}|^2",
+      "argumentation": "Selvom at målet med beviset er at bevise formlen for vinklen mellem to vektore så består det egentlige bevis af at bevise en formel for skalarproduktet og når vi kender dette udtryk, kan vi nemlig isolere $cos(v)$. Men med dét i mente så når vi skal argumentere hvorfor hvorfor vi bare kan placere vektor $\\vec{a}$ hvor det passer os bedst, skal vi altså argumentere for at skalarproduktet af to vektore ikke er afhængigt af andet end længden på to vektore og vinklen imellem dem. \n\nFor at vise dét, bruger vi udtrykket for kvadratet af længden af forskellen mellem to vilkårlige vektorer $\\vec{a}$ og $\\vec{b}$. Det gør vi fordi at med nogle få omskrivninger af dette udtryk kan vi vise at skalarproduktet af to vilkårlige vektore $\\vec{a}$ og $\\vec{b}$ kun afhænger af længden af vektorerne og vinklen imellem dem – ikke af hvor de starter i koordinatsystemet."}
+      ,
+      {
+      "skridt": "|\\vec{a}-\\vec{b}|^2 = (\\vec{a}-\\vec{b}) \\cdot (\\vec{a}-\\vec{b})",
+      "argumentation": "Vi starter med at omskrive udtrykket med denne regel: \n\n$|\\vec{a}|^2 = \\vec{a}^2 = \\vec{a} \\cdot \\vec{a}$"},
+      {
+      "skridt": "|\\vec{a}-\\vec{b}|^2 = (\\vec{a}-\\vec{b})^2",
+      "argumentation": "Vi reducere sammentrækker udtrykket til en kvadratsætning."},
+      {
+      "skridt": "|\\vec{a}-\\vec{b}|^2 = \\vec{a}^2+\\vec{b}^2-2\\vec{a}\\vec{b}",
+      "argumentation": "Vi opløser parentesen ved udregne kvadratsætningen, som har formen af det vi kalder 'den anden kvadratsætning' fordi at de to led i kvadratsætningen, $\\vec{a}$ og $\\vec{b}$, bliver trukket fra hinanden. \n\nUdregningen af den anden kvadratsætning følger denne regel: \n\n$(a-b)^2 = a^2 + b^2 - 2ab$ \n\nUden at have isoleret $\\vec{a}$ og $\\vec{b}$ fra hinanden, kan vi faktisk allerede se at skalarproduktet er “gemt” i længden af forskelsvektoren. Og den længde afhænger kun af afstanden mellem vektorernes spidser – ikke af hvor vektorerne starter. Men for at gøre det endnu tydeligere som omskriver vi udtrykket og isolerer $\\vec{a}$ og $\\vec{b}$ fra resten."},
+      {
+      "skridt": "|\\vec{a}-\\vec{b}|^2 = |\\vec{a}|^2+|\\vec{b}|^2-2\\vec{a}\\vec{b}",
+      "argumentation": "Vi ændre udtrykkene for kvadratet af de to vektorer $\\vec{a}$ og $\\vec{b}$ til at være udtryk for kvadratet af længden af de to vektorer, hvor vi bruger samme regel som tidligere: \n\n$\\vec{a}|^2 = \\vec{a}^2$"},
+      {
+        "skridt": "|\\vec{a}-\\vec{b}|^2+ 2\\vec{a}\\vec{b} = |\\vec{a}|^2+|\\vec{b}|^2",
+        "argumentation": "Nu rykker vi ledet der indeholder udtrykket for skalarproduktet: \n\n$2\\vec{a}\\vec{b}$ \n\n Over på venstre side af lighedstegnet og ændre fortegn."},
+      {
+        "skridt": "2\\vec{a}\\vec{b} = |\\vec{a}|^2+|\\vec{b}|^2-|\\vec{a}-\\vec{b}|^2",
+        "argumentation": "Nu rykker vi ledet der indeholder udtrykket for kvadratet af længden forskellen mellem to vektore: \n\n$|\\vec{a}-\\vec{b}|^2$ \n\n Over på højre side af lighedstegnet og ændre fortegn."},
+      {
+      "skridt": "\\frac{\\cancel{2}\\vec{a}\\vec{b}}{\\cancel{2}} = \\frac{|\\vec{a}|^2+|\\vec{b}|^2-|\\vec{a}-\\vec{b}|^2}{2}",
+      "argumentation": "Nu dividere vi med to på begge sider af lighedstegnet for at få skalarproduktet til at stå for sig selv"},
+      {
+      "skridt": "\\vec{a} \\cdot \\vec{b} = \\frac{|\\vec{a}|^2+|\\vec{b}|^2+|\\vec{a}-\\vec{b}|^2}{2}",
+      "argumentation": "Dermed er det bevist at skalarproduktet af to vilkårlige vektore $\\vec{a}$ og $\\vec{b}$ kun afhænger af længden af vektorerne og vinklen imellem dem – ikke af placering."},
+      {
+      "skridt": "\\vec{a} \\cdot \\vec{b} = \\frac{|\\vec{a}|^2+|\\vec{b}|^2+|\\vec{a}-\\vec{b}|^2}{2}",
+      "argumentation": "Dermed er det bevist at skalarproduktet af to vilkårlige vektore $\\vec{a}$ og $\\vec{b}$ kun afhænger af længden af vektorerne og vinklen imellem dem – ikke af placering."},
+      {
+      "skridt": "\\vec{a} = \\begin{pmatrix} |\\vec{a}| \\\\ 0 \\end{pmatrix} \\quad \\text{og} \\quad \\vec{b} = \\begin{pmatrix} |\\vec{b}| \\cdot \\cos(v) \\\\ |\\vec{b}| \\cdot \\sin(v) \\end{pmatrix}",
+      "argumentation": "Nu har vi argumenteret for hvorfor vi kan placere vektorene hvor vi vil i koordinatsystemet, da skalarproduktet kun afhænger af længde og vinkel og derfor begynder vi beviset med at beskrive hvad vi ved om vores to vektore. Som sagt tideligere er der to hovedtyper at beskrive vektore på, nemlig med kartesiske og polære koordinater. Men de her beskrivelser ligner jo ingen af dem? \n\nFor at forklare hvorfor vi beskriver dem sådan som vi gør skal vi tage fat i noget trigonometri. Hvis man har en vilkårlig vektor kan den faktisk beskrives som en retvinklet trekant. vektorens x-koordinat er den hosliggende katete og vektorens y-koordinat er denn modstående katete og længden af vektore er trekantens hypotenuse. Hvis vi nu har det i mente også tager fat i formlen for cosinus og sinus: \n\n$cos(v)=\\frac{hosliggende}{hypotenuse}$ \n\n$sin(v)=\\frac{modstående}{hypotenuse}$",
+      "billede": "billeder/vinkelmellemtovektore.png"},
+      {
+      "skridt": "\\vec{a} = \\begin{pmatrix} |\\vec{a}| \\\\ 0 \\end{pmatrix} \\quad \\text{og} \\quad \\vec{b} = \\begin{pmatrix} |\\vec{b}| \\cdot \\cos(v) \\\\ |\\vec{b}| \\cdot \\sin(v) \\end{pmatrix}",
+      "argumentation": "Hvis man har en vilkårlig vektor $\\vec{a}$ så kan den faktisk beskrives som en retvinklet trekant. vektorens første koordinat, $a_1$,  er længden af den hosliggende katete og vektorens anden koordinat, $a_2$,  er længden af den modstående katete og længden af vektoren, $|\\vec{a}|$, er trekantens hypotenuse. Hvis vi nu husker det og vi så tager fat i formlen for cosinus og sinus: \n\n$cos(v)=\\frac{hosliggende}{hypotenuse}$ \n\n$sin(v)=\\frac{modstående}{hypotenuse}$ \n\nSå kan vi lynhurtigt se at vi kan beskrive og omskrive udtrykkene for en vektors første og anden koordinater på følgene måde: \n\nFørste koordinat: \n\n$cos(v)=\\frac{hosliggende}{hypotenuse} \\Leftrightarrow cos(v)=\\frac{a_1}{|\\vec{a}|}$ \n\n$cos(v) \\cdot |\\vec{a}|=\\frac{a_1 \\cdot \\cancel{|\\vec{a}|}}{\\cancel{|\\vec{a}|}} \\Leftrightarrow cos(v) \\cdot |\\vec{a}|=a_1$ \n\nAnden koordinat: \n\n$sin(v)=\\frac{modstående}{hypotenuse} \\Leftrightarrow sin(v)=\\frac{a_2}{|\\vec{a}|}$ \n\n$sin(v) \\cdot |\\vec{a}|=\\frac{a_2 \\cdot \\cancel{|\\vec{a}|}}{\\cancel{|\\vec{a}|}} \\Leftrightarrow sin(v) \\cdot |\\vec{a}|=a_2$ \n\nSamlet set kan en vilkårlig vektor $\\vec{a}$ beskrives: \n\n$\\vec{a} = \\begin{pmatrix} |\\vec{a}| \\cdot cos(v^{\\circ}) \\\\ |\\vec{a}| \\cdot sin(v^{\\circ}) \\end{pmatrix}$",
+      "billede": "billeder/vinkelmellemtovektore.png"},
+      {
+      "skridt": "\\vec{a} = \\begin{pmatrix} |\\vec{a}| \\\\ 0 \\end{pmatrix} \\quad \\text{og} \\quad \\vec{b} = \\begin{pmatrix} |\\vec{b}| \\cdot \\cos(v) \\\\ |\\vec{b}| \\cdot \\sin(v) \\end{pmatrix}",
+      "argumentation": "Hvis vi så anvender denne omskrivning til $\\vec{a}$ så kan vi hurtigt se fordelen ved at placere $\\vec{a}$ langs x-aksen, fordi så ved vi at vinklen er $0$ og det kan bruges til at reducere og dermed udelukke nogle ellers ukendte variabler: \n\n$\\vec{a} = \\begin{pmatrix} |\\vec{a}| \\cdot cos(0^{\\circ}) \\\\ |\\vec{a}| \\cdot sin(0^{\\circ}) \\end{pmatrix}$ \n\nVi ved at $cos(0^{\\circ}) = 1$ og $sin(0^{\\circ}) = 0$. Derfor reduceres udtrykket for vektor $\\vec{a}$ til:\n\n$\\vec{a} = \\begin{pmatrix} |\\vec{a}| \\\\ 0) \\end{pmatrix}$ \n\nOg eftersom vi ikke kender til vinklen for $\\vec{b}$ så kan vi bare lade den stå som det er."},
+      {
+      "skridt": "\\vec{a} \\cdot \\vec{b} = |\\vec{a}| \\cdot |\\vec{b}| \\cdot \\cos(v) + 0 \\cdot |\\vec{b}| \\cdot \\sin(v)",
+      "argumentation": "Vi skal jo bevise en formel for skalarproduktet af to vektore og derfor er det passende nu hvor vi kan beskrive deres første og anden koordinater at vi anvender dem i denne formel for skalarproduktet: \n\n$\\vec{a} \\cdot \\vec{b} = a_1 \\cdot b_1 + a_2 \\cdot b_2$"},
+      {
+      "skridt": "\\vec{a} \\cdot \\vec{b} = |\\vec{a}| \\cdot |\\vec{b}| \\cdot \\cos(v)",
+      "argumentation": "Nu har vi i princippet bevist formlen for skalarproduktet af to vektore, og vi kan nu afslutte beviset ved at isolere $cos(v)$ og få formlen for vinklen mellem to vektore."},
+      {
+      "skridt": "\\frac{\\vec{a} \\cdot \\vec{b}}{|\\vec{a}| \\cdot |\\vec{b}|} = \\frac{\\cancel{|\\vec{a}| \\cdot |\\vec{b}| \\cdot} \\cos(v)}{\\cancel{|\\vec{a}| \\cdot |\\vec{b}|}}",
+      "argumentation": "Vi isolerer ved at dividere med: \n\n$|\\vec{a}| \\cdot |\\vec{b}| $\n\n På begge sider af lighedstegnet"},
+      {
+      "skridt": "\\frac{\\vec{a} \\cdot \\vec{b}}{|\\vec{a}| \\cdot |\\vec{b}|} = \\cos(v)",
+      "argumentation": "Dermed er ovenstående sætning bevist $\\blacksquare$"} 
+    ]
+    },
+    {
+      "bevis": "13) Induktionsbevis: Differentialkvotienten for funktioner med formen: x^n",
+      "sætning": "For alle $$n \\in \\mathbb{N}$$ og alle $$x \\in \\mathbb{R}$$ gælder at $$(x^n)' = nx^{n-1}$$",
+      "udførelse": [
+        {
+          "skridt": "Introduktion",
+          "argumentation": "Beviset er et induktionsbevis og et induktionsbevis består af to skridt: \n\nInduktionens start:\nEt form for 'mini-bevis' hvor vi viser at reglen vi skal bevise gælder for et bestemt tal.\nI dette tilfælde er det når $n = 1$ at vi udfører induktionens start. \n\nInduktionsskridtet:\nPå baggrund af det 'mini-bevis' vi lavede i induktionens start bygger vi en antagelse om at 'hvis det gælder for et vilkårligt tal $n$ så kan vi også bevise at det gælder for et vilkårligt tal $n+1$' \nAltså vi bygger en antagelse om at reglen gælder for et vilkårligt tal (på baggrund af induktionens start) også vil vi bevise at reglen også gælder for tallet der kommer efter det vilkårlige tal.\n\nMålet med denne to-delte strategi, som er det vi kalder et 'induktionsbevis' er at:\nnår vi har bevist at reglen gælder for et vilkårligt tal $n$ OG at reglen gælder for det tal der kommer efter det vilkårlige tal $n$, så må reglen gælde for alle tal $n$ kan være. \n\nDet her er betydning af tegnene i bevissætningen:\nDet er givet at $n$ er et naturligt tal: $$n \\in \\mathbb{N}$$ \nDet betyder at $n$ er et positivt helt tal. \n\nDet er også bestemt at x er et reelt tal: $$x \\in \\mathbb{R}$$ \nDet betyder at x kan være et decimaltal eller et helt tal der både kan være positivt, negativt eller 0."},
+        {
+          "skridt": "\\frac{\\Delta y}{\\Delta x}=\\frac{(x_0 + h) - x_0}{(x_0 + h)- x_0} = 1",
+          "argumentation": "Induktionens start: \nVi udfører induktionens start som et 'mini-bevis'. \n\nVi skal bevise at for en funktion $f(x)$ med forskriften: \n\n$f(x)=x$\n\nSå kan funktionen $f(x)$'s differentialkvotient bestemmes med følgende formel:\n$(x^n)' = n \\cdot x^{n - 1}$ \n\nHvis vi anvender formlen på vores funktion $f(x)$:\n\n$(x^1)' = 1$ \n\nså får vi resultatet:\n$1\\cdot x^{1 - 1} = x^0 = 1$\n\nVi beviser at formlen virker når $f(x) = x$ som et hvert andet differentialregnings bevis, nemlig med tretrinsreglen:\n1. Bestem differenskvotienten \n2. Omskriv differenskvotienten \n3. Undersøg om differenskvotienten har en grænseværdi for $\\Delta x \\to 0$ og i så fald bestem differentialkvoitenten. \n\nDe to punkter vi arbejder med i dette mini-bevis er: \n$(x_0, f(x_0))$ og $(x_0 + h, f(x_0 + h))$\n\nDet første skridt i beviset er at vi bestemmer differenskvotienten til $1$ ved at dividere forskel i funktionsværdi med forskel i x-værdi."
+        },
+        {
+          "skridt": "f'(x_0) = \\lim_{h \\to 0} \\left( \\frac{\\Delta y}{\\Delta x}\\right) = \\lim_{h \\to 0} \\left( \\frac{(x_0 + h) - x_0}{(x_0 + h) - x_0} \\right)=1",
+          "argumentation": "Vi kan faktisk bevæge os direkte videre til 3. skridt af tretrinsreglen.\nVi behøver nemlig ikke at omskrive differenskvotienten når den er lig $1$ , fordi at vi allerede kender grænseværdien.\nVi anvender $\\lim_{h \\to 0}$ \n\n Og vi har dermed bevist at når: $f(x)=x$ \n\n Så gælder formlen: $(x^n)'=n \\cdot x^{n-1}$ \n\nTil at bestemme differentialkvotienten for $f(x)$  \n\nAlt i alt viser induktionens start at formlen vi skal bevise virker når $n = 1$ og denne information anvendes i næste skridt, induktionsskridtet."
+        },
+        {
+          "skridt": "(x^{n+1})' = (n + 1) x^{n+1 - 1} = (n + 1) x^n",
+          "argumentation": "I induktionens start beviste vi at formlen gælder når $n=1$. \nI induktionsskridtet bruger vi dette til at ANTAGE at hvis formlen gælder for $n=1$ \nSå gælder formlen for en vilkårlig naturlig værdi $n$. \n\nMed udgangspunkt i denne antagelse om at formlen gælder for en vilkårligt værdi for $n$ så vil vi bevise at formlen gælder for $n + 1$ \n\nAltså at den også gælder for tallet der kommer efter et vilkårligt tal $n$\n\n Motivet bag denne bevismetode er at kunne sige 'Hvis formlen gælder for $n$ OG $n+1$ så har vi bevist at formlen gælder for et hvilken som helst værdi for $n$, OG det tal der kommer efter, så har vi dermed bevist at formlen virker for alle de værdier $n$ kan have. \n\nDette er kerneprincippet i induktionsbeviser:\nMan beviser en formel for ét startpunkt, og derefter, at formlen kan overføres fra ét tal til det næste."},
+        {
+          "skridt": "(x^{n+1})' = (x \\cdot x^n)'",
+          "argumentation": "Vi starter induktionsskridtet med at omskrive den afledte af $x^{n+1}$ med brug af denne regel: \n\n$a^r \\cdot a^s = a^{r+s}$ \n\nDette tillader os at bruge produktreglen til at bevæge os videre i beviset."},
+        {
+          "skridt": "(x^{n+1})'=  (x \\cdot x^n)'=(x)'(x^n) + (x)(x^n)'",
+          "argumentation": "Vi anvender produktreglen til omskrivning:\n\n $( f(x) \\cdot g(x))' = f'(x) \\cdot g(x) + f(x) \\cdot g'(x)$"},
+        {
+          "skridt": "(x^{n+1})'= (x)'(x^n) + (x)(x^n)'= 1 \\cdot x^n + x \\cdot n x^{n-1}",
+          "argumentation": "Vi anvender disse to regler til at aflede og dermed reducere udtrykket: \n\n$(x)'=1$ \n\n$(x^{n})'=n \\cdot x^{n-1}$"},
+        {
+          "skridt": "(x^{n+1})'= 1 x^n + n x^n",
+          "argumentation": "Vi anvender denne regel igen: \n\n$a^r \\cdot a^s = a^{r+s}$ \n\n På den måde har vi nu et udtryk bestående af to led med en fælles faktor $x^n$"},
+        {
+          "skridt": "(x^{n+1})= 1 x^n + n x^n=(n + 1)x^n",
+          "argumentation": "Vi faktoriserer udtrykket"},
+        {
+          "skridt": "(x^{n+1})= (n + 1)x^n",
+          "argumentation": "Dermed er ovenstående sætning bevist $\\blacksquare$"}
+      ]
+    }
+  ]
+}
